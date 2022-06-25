@@ -1,3 +1,42 @@
 <resources>
-    <string name="app_name">todayHome</string>
+    <string name="app_name">오늘의 집</string>
+    <string name="home">홈</string>
+    <string name="home_service">홈서비스</string>
+    <string name="store">스토어</string>
+    <string name="plus">플러스</string>
+    <string name="my_page">마이페이지</string>
+    <string name="text">지금 가입하면 "<b>"최대 10만원"</b>"\n"쿠폰 증정!</string>
+    <string name="email_login"><u>이메일로 로그인</u></string>
+    <string name="email_join"><u>이메일로 가입</u></string>
+
+
+    <string name="password_address">
+        <html><font color="#424242">회원가입 시 입력한 정보가 기억나지 않는다면?\n</font></html>
+        <html><font color="#35C5F1">고객센터 문의하기(1670-0876)</font></html>
+
+    </string>
+
+    <string name="age_string">
+
+        <html>만 14세 이상입니다.<font color="#38D0F2" size="10">(필수)</font></html>
+    </string>
+
+    <string name="use_string">
+
+        <html><u>이용약관</u>><font color="#38D0F2" size="10">(필수)</font></html>
+    </string>
+
+    <string name="privacy_string">
+
+        <html><u>개인정보수집 및 이용동의</u>><font color="#38D0F2" size="10">(필수)</font></html>
+    </string>
+
+    <string name="event_string">
+
+        <html><u>이벤트,쿠폰, 특가 알림 메일, 앱푸시 및 SMS 등 수신</u><font color="#808080" size="10">(선택)</font></html>
+    </string>
+
+
+
+
 </resources>
