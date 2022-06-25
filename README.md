@@ -31,6 +31,8 @@
    <img src = "https://user-images.githubusercontent.com/76811495/175778889-31c4b2e9-6553-4ee3-afd2-b9b5b4c8aaae.png" width="width 30%" height="height 30%">
 
 5. 이메일로 가입 레이아웃 80%
+
+
    <img src = "https://user-images.githubusercontent.com/76811495/175779085-0bc8e6a7-6448-430f-ab84-a6f912a93bdb.png" width="width 30%" height="height 30%">
 6. 비회원 주문조회하기 레이아웃 구현 90% (버튼만 넣으면 됩니다.)
    <img src = "https://user-images.githubusercontent.com/76811495/175778978-a6498731-e83d-434b-95a8-45f6b5ba9d98.png" width="width 30%" height="height 30%">
