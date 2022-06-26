@@ -52,9 +52,8 @@
 
 <details>
 <summary>📌6월 26일 개발 일지</summary>
-1. 파이어베이스 Authentication 이용해 페이스북 로그인 구현<br>
 
-### issue<br>
+### 1. 파이어베이스 Authentication 이용해 페이스북 로그인 구현<br>
 구현하는 데 시간이 조금 걸렸지만 무사히 구현을 하였습니다. <br>
 하지만 로그인 버튼이 com.facebook.login.widget.LoginButton 요렇게 쓰면 사진이 안 넣어져서 이 부분에서 시간이 많이 소요하였습니다.<br>
 <br>
@@ -69,16 +68,16 @@
 <br>
 <br>
 
-2. HomeFragment + StoreFragment 에 TabLayout 를 넣어줬습니다.<br>
-### issue<br>
+
+### 2. HomeFragment + StoreFragment 에 TabLayout 를 넣어줬습니다.<br>
 이 부분에서는 큰 issue 가 없었습니다.<br>
 
 <img src = "https://user-images.githubusercontent.com/76811495/175815566-5b50d47e-4ad8-40cf-8273-8e20aad3d4ae.png" width="width 30px" height="height 30%">
 <br>
 <br>
 
-3. StoreFragment 에서 스토어홈 탭에서 ViewPage2를 넣어줬습니다.<br>
-### issue<br>
+
+### 3. StoreFragment 에서 스토어홈 탭에서 ViewPage2를 넣어줬습니다.<br>
 ViewPage2가 TabLayout 쪽 ViewPager2와 스크롤 방향이 같아서 베너가 움직이질 않았습니다.
 그래서 자식 뷰가 우선적으로 스크롤을 인식할 수 있도록 `NestedScrollableHost ` 사용해 issue를 
 해결하였습니다.
