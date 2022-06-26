@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">오늘의 집</string>
     <string name="home">홈</string>
-    <string name="home_service">홈서비스</string>
+    <string name="home_service">맞춤업체찾기</string>
     <string name="store">스토어</string>
     <string name="plus">플러스</string>
     <string name="my_page">마이페이지</string>
@@ -35,8 +35,15 @@
 
         <html><u>이벤트,쿠폰, 특가 알림 메일, 앱푸시 및 SMS 등 수신</u><font color="#808080" size="10">(선택)</font></html>
     </string>
+    <string name="splashImagView">스플래쉬 화면 이미지뷰</string>
 
+    <!--    facebook -->
 
+    <string name="facebook_app_id">464644762039491</string>
+    <string name="fb_login_protocol_scheme">fb464644762039491</string>
+    <string name="facebook_client_token">9a5075210d3f000f900c63763acecd1c</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

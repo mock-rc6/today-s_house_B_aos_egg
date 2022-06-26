@@ -6,6 +6,35 @@
         <item name="fontFamily">@font/marufont</item>
         <item name="android:minHeight">0dp</item>
     </style>
-    
+
+    <style name="fragmentHomeTabText" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!--        폰트크기-->
+        <item name="android:textSize">18sp</item>
+
+        <!--        폰트스타일-->
+        <item name="android:textStyle">bold</item>
+
+
+    </style>
+
+    <style name="fragmentHomeMusicTabText" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!--        폰트크기-->
+        <item name="android:textSize">11sp</item>
+
+        <!--        폰트스타일-->
+        <item name="android:textStyle">bold</item>
+
+        <!--        탭바 선택시 텍스트 색상-->
+        <item name="android:textColorPrimary">#FFEB3B</item>
+
+        <!--        탭바 선택이 안될시 색상-->
+        <item name="android:textColorSecondary">@color/gray_cc</item>
+
+        <!--        하단 움직이는 바 색상-->
+        <item name="colorAccent">@android:color/transparent</item>
+
+        <!--        텍스트 색상 변경-->
+        <item name="colorPrimary">#44AAFB</item>
+    </style>
     
 </resources>

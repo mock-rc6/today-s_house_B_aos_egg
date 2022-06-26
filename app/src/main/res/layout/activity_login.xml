@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".src.login.LoginActivity">
 
     <TextView
         android:id="@+id/splash_text"
@@ -78,20 +78,48 @@
             android:scaleType="fitXY"
             android:src="@drawable/naver"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/facebookButton"
+            app:layout_constraintEnd_toStartOf="@id/FrameLayout1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/facebookButton"
+
+        <FrameLayout
+            android:id="@+id/FrameLayout1"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/facebook"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/appleButton"
             app:layout_constraintStart_toEndOf="@id/naverButton"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebookButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_for_circle_button"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/appleButton"
+                app:layout_constraintStart_toEndOf="@id/naverButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/fb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:onClick="onClick"
+                android:background="@drawable/facebook"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/appleButton"
+                app:layout_constraintStart_toEndOf="@id/naverButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </FrameLayout>
+
 
         <ImageView
             android:id="@+id/appleButton"
@@ -101,7 +129,7 @@
             android:src="@drawable/apple"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/facebookButton"
+            app:layout_constraintStart_toEndOf="@id/FrameLayout1"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

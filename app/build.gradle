@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 // local.properties에서 키,값 가져오기
@@ -65,9 +66,23 @@ dependencies {
     // 카카오 로그인
     implementation "com.kakao.sdk:v2-user:2.9.1"
 
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.6'
+    implementation 'com.facebook.android:facebook-login:14.0.0'
+
     //Circle ImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // 이미지로딩 라이브러리
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //material
+    implementation "com.google.android.material:material:1.7.0-alpha02"
+
+    //Coordinatorlayout
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+
+
+
 }

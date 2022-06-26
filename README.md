@@ -1,5 +1,8 @@
 # todayhome
-오늘의 집 (완성률 : 0%)
+오늘의 집 clone (완성률 : 3%)
+
+프로젝트 기간 : 22-06-25 ~ 22-07-08 
+
 
 <details>
 <summary>📌6월 25일 개발 일지</summary>
@@ -44,4 +47,57 @@
 
 
    <img src = "https://user-images.githubusercontent.com/76811495/175778935-ad2ee378-9bf0-4858-b68a-70f902af2a3d.png" width="width 30%" height="height 30%">
+
+</details>
+
+<details>
+<summary>📌6월 26일 개발 일지</summary>
+1. 파이어베이스 Authentication 이용해 페이스북 로그인 구현<br>
+
+### issue<br>
+구현하는 데 시간이 조금 걸렸지만 무사히 구현을 하였습니다. <br>
+하지만 로그인 버튼이 com.facebook.login.widget.LoginButton 요렇게 쓰면 사진이 안 넣어져서 이 부분에서 시간이 많이 소요하였습니다.<br>
+<br>
+구글링 + Stack Overflow 검색 후 한 블로그에서 `FrameLayout` 으로 묶고 그 안에서 `com.facebook.login.widget.LoginButton` 는 `visibility="gone"` 으로 보이지 않게 해준 후 `ImageButton` 에 `onClick`  속성을 달아서 `com.facebook.login.widget.LoginButton`
+가 수행하도록 한 결과 무사히 성공하였습니다.<br>
+<br>
+<br>
+
+
+
+<img src = "https://user-images.githubusercontent.com/76811495/175814847-0765c879-1c74-4c88-aca7-b56809d1ccd2.png" width="width 30px" height="height 30%">
+<br>
+<br>
+
+2. HomeFragment + StoreFragment 에 TabLayout 를 넣어줬습니다.<br>
+### issue<br>
+이 부분에서는 큰 issue 가 없었습니다.<br>
+
+<img src = "https://user-images.githubusercontent.com/76811495/175815566-5b50d47e-4ad8-40cf-8273-8e20aad3d4ae.png" width="width 30px" height="height 30%">
+<br>
+<br>
+
+3. StoreFragment 에서 스토어홈 탭에서 ViewPage2를 넣어줬습니다.<br>
+### issue<br>
+ViewPage2가 TabLayout 쪽 ViewPager2와 스크롤 방향이 같아서 베너가 움직이질 않았습니다.
+그래서 자식 뷰가 우선적으로 스크롤을 인식할 수 있도록 `NestedScrollableHost ` 사용해 issue를 
+해결하였습니다.
+<br>
+<img src = "https://user-images.githubusercontent.com/76811495/175815821-7a3ab0ad-e900-4cf8-a166-2a350ea7e428.png" width="width 30px" height="height 30%">
+<br>
+<br>
+
+### 해결 못 한 issue<br><br>
+아래 스크린샷을 보면 바텀네비게이션 마지막에 플러스 버튼이 크기가 작은걸 고치고 싶었는데 결국 오늘 못 고쳤습니다.
+단서만 찾았을 뿐 어떻게 저걸 해결해야 할지 더 해봐야 할 거 같습니다.
+
+플로팅 버튼을 저 위에다 놓고 사용하려고 시도를 해봤지만 플로팅 버튼안에 크기를 키우면 이미지가 밖으로 나가는 현상이
+발생해 실패를 하였습니다.
+
+
+
+<img src = "https://user-images.githubusercontent.com/76811495/175815821-7a3ab0ad-e900-4cf8-a166-2a350ea7e428.png" width="width 30px" height="height 30%">
+
+
+
 </details>

@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".GlobalApplication"
+        android:name=".config.kakao_api.GlobalApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,24 +17,32 @@
         android:theme="@style/Theme.TodayHome"
         tools:targetApi="31">
         <activity
-            android:name=".NonMembersActivity"
+            android:name=".store_home_Item_layout_banner"
             android:exported="false" />
         <activity
-            android:name=".Email_join_Activity"
+            android:name=".DialogActivity"
             android:exported="false" />
         <activity
-            android:name=".Password_reset_Activity"
+            android:name="com.example.todayhome.src.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Email_loginActivity"
+            android:name="com.example.todayhome.src.login.NonMembersActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.todayhome.src.login.Email_join_Activity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:name="com.example.todayhome.src.login.Password_reset_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.todayhome.src.login.Email_loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".src.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".src.splash.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,6 +62,30 @@
                 <data
                     android:host="oauth"
                     android:scheme="kakao${kakaoApiManifest}" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
     </application>

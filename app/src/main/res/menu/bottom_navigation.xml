@@ -9,15 +9,15 @@
         android:title="@string/store" />
 
     <item android:id="@+id/home_service"
-        android:icon="@drawable/ic_baseline_restaurant_24"
+        android:icon="@drawable/ic_baseline_person_search_24"
         android:title="@string/home_service" />
     <item android:id="@+id/my_page"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/my_page" />
 
     <item android:id="@+id/plus"
-        android:icon="@drawable/ic_baseline_checkroom_24"
-        android:title="@string/plus" />
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:title="" />
 
 
 </menu>

@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="sky_blue">#38D0F2</color>
     <color name="gray_93">#939393</color>
-
+    <color name="windowsBackground">#fff</color>
+    <color name="gray_cc">#cccccc</color>
 
 </resources>

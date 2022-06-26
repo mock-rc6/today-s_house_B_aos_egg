@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topConstraint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.95">
+
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edittext_rounded_corner_rectangle"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawableTint="@color/gray_93"
+            android:hint=" 오늘의집 통합검색"
+            android:inputType="text"
+            android:paddingStart="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <ImageButton
+            android:id="@+id/turnedButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#fff"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_turned_in_not_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toEndOf="@id/edit_search"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1"
+            app:tint="@color/gray_93" />
+
+        <ImageButton
+            android:id="@+id/shoppingButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#fff"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_shopping_cart_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintStart_toEndOf="@id/turnedButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1"
+            app:tint="@color/gray_93" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:tabSelectedTextColor="@color/sky_blue"
+        android:theme="@style/fragmentHomeTabText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topConstraint"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.95"
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        app:tabIndicatorColor="@color/sky_blue"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextAppearance="@style/fragmentHomeTabText" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/homeTabLayoutViewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        android:saveEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
