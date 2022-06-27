@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.todayhome.R
 import com.example.todayhome.databinding.FragmentHomeBinding
+import com.example.todayhome.databinding.FragmentStoreBinding
 
 import com.example.todayhome.src.main.store.adapter.TabLayoutViewPager2AdapterStore
 import com.google.android.material.tabs.TabLayout
@@ -15,7 +16,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 
 class StoreFragment : Fragment(R.layout.fragment_store) {
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentStoreBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,7 +24,7 @@ class StoreFragment : Fragment(R.layout.fragment_store) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentStoreBinding.inflate(inflater, container, false)
         tabLayoutViewPage2()
 
 

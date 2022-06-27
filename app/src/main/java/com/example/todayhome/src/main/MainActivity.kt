@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val store = StoreFragment()
 
 
+
         val bottomSheetView = layoutInflater.inflate(R.layout.activity_dialog, null)
         val bottomSheetDialog = BottomSheetDialog(this)
         bottomSheetDialog.setContentView(bottomSheetView)

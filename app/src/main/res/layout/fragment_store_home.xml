@@ -25,10 +25,10 @@
             android:layout_height="wrap_content">
 
             <com.example.todayhome.util.NestedScrollableHost
+                android:id="@+id/NestedScrollableHost"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:saveEnabled="false"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -36,30 +36,159 @@
                     android:id="@+id/viewPager2"
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
+                    android:saveEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:saveEnabled="false"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                    android:id="@+id/viewPager2Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="20dp"
+                    app:dampingRatio="0.5"
+                    app:dotsColor="#FFFFFF"
+                    app:dotsCornerRadius="20dp"
+                    app:dotsSize="6dp"
+                    app:dotsSpacing="2dp"
+                    app:dotsStrokeWidth="1dp"
+                    app:stiffness="300" />
 
             </com.example.todayhome.util.NestedScrollableHost>
 
-            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
-                android:id="@+id/viewPager2Indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:dampingRatio="0.5"
-                app:dotsCornerRadius="20dp"
-                app:dotsSize="6dp"
-                app:dotsColor="#FFFFFF"
-                app:dotsSpacing="2dp"
-                app:dotsStrokeWidth="1dp"
-                app:stiffness="300"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="20dp"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menuRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:nestedScrollingEnabled="false"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NestedScrollableHost"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.9"
+                tools:listitem="@layout/activity_grid_menu_layout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/categoryConstraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/menuRecyclerView"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.9">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="어떤 상품을 찾나요?"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/allCategoryButton"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/category_store_corner_rectangle"
+                    android:text="카테고리 전체 ＞"
+                    android:textColor="@color/sky_blue"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.33" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemMenuRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="450dp"
+                android:nestedScrollingEnabled="false"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryConstraintLayout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="1"
+                tools:listitem="@layout/activity_grid_menu_layout2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/todayDillConstraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemMenuRecyclerView"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.9">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="오늘의 딜"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/todayDillViewMore"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:text="더보기"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/gray_93"
+                    android:textSize="15sp"
+                    android:gravity="right|bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.33" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/bannerViewPager2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/todayDillConstraintLayout"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.9" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

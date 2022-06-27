@@ -17,11 +17,15 @@
         android:theme="@style/Theme.TodayHome"
         tools:targetApi="31">
         <activity
-            android:name=".store_home_Item_layout_banner"
+            android:name=".src.main.store.adapter.GridMenuLayout2"
             android:exported="false" />
         <activity
-            android:name=".DialogActivity"
+            android:name=".src.main.store.adapter.GridMenuLayout"
             android:exported="false" />
+        <activity
+            android:name=".src.main.store.store_home_Item_layout_banner"
+            android:exported="false" />
+
         <activity
             android:name="com.example.todayhome.src.login.LoginActivity"
             android:exported="false" />

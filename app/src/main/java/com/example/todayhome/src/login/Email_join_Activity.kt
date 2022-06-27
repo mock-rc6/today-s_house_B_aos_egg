@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.todayhome.databinding.ActivityEmailJoinBinding
+import retrofit2.Call
+import retrofit2.http.POST
 
 class Email_join_Activity : AppCompatActivity() {
 
@@ -19,5 +21,18 @@ class Email_join_Activity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        binding.signUpButton.setOnClickListener {
+
+        }
+
+
     }
+}
+
+interface SignService{
+
+    @POST("/users")
+    fun login(): Call<String>
+
 }

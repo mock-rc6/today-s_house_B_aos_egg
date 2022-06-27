@@ -8,12 +8,13 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.viewpager2.widget.ViewPager2
-import com.example.todayhome.R
-import com.example.todayhome.databinding.FragmentHomeBinding
 import com.example.todayhome.databinding.FragmentStoreHomeBinding
+import com.example.todayhome.src.main.store.adapter.GridMenuStoreHomeAdapter
+import com.example.todayhome.src.main.store.adapter.GridMenuStoreHomeAdapter2
 import com.example.todayhome.src.main.store.adapter.viewPage2StoreHomeAdapter
 import com.example.todayhome.src.main.store.data.StoreHomeBannerItemList
+import com.example.todayhome.src.main.store.data.StoreHomeGridItemList
+import com.example.todayhome.src.main.store.data.StoreHomeGridItemList2
 import com.example.todayhome.src.main.store.storeHomeViewModel
 
 
@@ -26,6 +27,9 @@ class StoreHomeFragment : Fragment() {
     private lateinit var viewPagerAdapter: viewPage2StoreHomeAdapter
     private lateinit var viewModel: storeHomeViewModel
 
+    private lateinit var gridRecyclerViewAdapter: GridMenuStoreHomeAdapter
+    private lateinit var gridRecyclerViewAdapter2: GridMenuStoreHomeAdapter2
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,6 +39,8 @@ class StoreHomeFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(storeHomeViewModel::class.java)
         viewModel.setBannerItems(StoreHomeBannerItemList)
+        viewModel.setGridItems(StoreHomeGridItemList)
+        viewModel.setGridItems2(StoreHomeGridItemList2)
 
 
         initViewPager2()
@@ -50,7 +56,22 @@ class StoreHomeFragment : Fragment() {
             viewPagerAdapter = viewPage2StoreHomeAdapter()
             adapter = viewPagerAdapter
             binding.viewPager2Indicator.attachTo(binding.viewPager2)
+
+
         }
+
+        binding.menuRecyclerView.apply {
+            gridRecyclerViewAdapter = GridMenuStoreHomeAdapter()
+            layoutManager = GridLayoutManager(context, 5)
+            adapter = gridRecyclerViewAdapter
+        }
+
+        binding.itemMenuRecyclerView.apply {
+            gridRecyclerViewAdapter2 = GridMenuStoreHomeAdapter2()
+            layoutManager = GridLayoutManager(context, 4)
+            adapter = gridRecyclerViewAdapter2
+        }
+
     }
 
     private fun subscribeObservers() {
@@ -58,7 +79,17 @@ class StoreHomeFragment : Fragment() {
             viewPagerAdapter.submitList(bannerItemList)
         })
 
+        viewModel.gridItemList.observe(viewLifecycleOwner, Observer {gridItemList->
+            gridRecyclerViewAdapter.submitList(gridItemList)
+        })
+
+        viewModel.gridItemList2.observe(viewLifecycleOwner, Observer {gridItemList2->
+            gridRecyclerViewAdapter2.submitList(gridItemList2)
+        })
+
+
     }
+
 
 
 }
