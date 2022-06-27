@@ -7,6 +7,6 @@ import androidx.fragment.app.Fragment
 import com.example.todayhome.R
 
 
-class RecipeFragment : Fragment(R.layout.fragment_recipe){
+class Home_service_Fragment : Fragment(R.layout.fragment_home_service){
 
 }

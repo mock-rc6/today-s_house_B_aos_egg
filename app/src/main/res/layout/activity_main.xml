@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".src.main.MainActivity">
 
+
+
+
+
+
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="0dp"
@@ -19,7 +24,6 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         app:itemIconTint="@drawable/selector_menu_color"
         app:itemRippleColor="@null"
         app:itemTextColor="@drawable/selector_menu_color"
@@ -29,7 +33,20 @@
         app:layout_constraintStart_toStartOf="parent"
         android:theme="@style/Widget.BottomNavigationView"
         android:clipChildren="false"
-        app:menu="@menu/bottom_navigation" />
+        app:menu="@menu/bottom_navigation" >
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plusButton"
+            android:background="@drawable/ic_baseline_add_circle_24"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/sky_blue"/>
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 

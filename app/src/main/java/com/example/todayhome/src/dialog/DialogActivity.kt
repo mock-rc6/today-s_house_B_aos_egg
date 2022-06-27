@@ -22,6 +22,7 @@ class DialogActivity : BottomSheetDialogFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         view?.findViewById<Button>(R.id.button_bottom_sheet)?.setOnClickListener {
             dismiss()
         }

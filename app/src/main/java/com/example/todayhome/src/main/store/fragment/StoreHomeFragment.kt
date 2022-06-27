@@ -36,8 +36,10 @@ class StoreHomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(storeHomeViewModel::class.java)
         viewModel.setBannerItems(StoreHomeBannerItemList)
 
+
         initViewPager2()
         subscribeObservers()
+
         return binding.root
     }
 
@@ -47,6 +49,7 @@ class StoreHomeFragment : Fragment() {
         binding.viewPager2.apply {
             viewPagerAdapter = viewPage2StoreHomeAdapter()
             adapter = viewPagerAdapter
+            binding.viewPager2Indicator.attachTo(binding.viewPager2)
         }
     }
 

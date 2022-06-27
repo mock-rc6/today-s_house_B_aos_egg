@@ -26,11 +26,11 @@ class viewPage2StoreHomeAdapter  : RecyclerView.Adapter<RecyclerView.ViewHolder>
         return BannerViewHolder(binding)
     }
 
-    override fun getItemCount(): Int =Int.MAX_VALUE
+    override fun getItemCount(): Int = ITEM_COUNT
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         bannerItemList?.let { bannerItemList ->
-            (holder as BannerViewHolder).bind(bannerItemList[position%3])
+            (holder as BannerViewHolder).bind(bannerItemList[position])
         }
     }
 

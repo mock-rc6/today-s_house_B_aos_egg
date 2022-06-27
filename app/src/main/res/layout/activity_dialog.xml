@@ -15,29 +15,15 @@
         android:textColor="@android:color/black"
         android:textSize="24sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="- 하단에 필요한 정보를 넣을수 있습니다."
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="- 정말 활용도가 높은 기능이죠? 모두 즐겁게 개발해요."
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button_bottom_sheet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1c9d9e"
+        android:text="좋아요!"
         android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:text="좋아요!" />
+        android:textStyle="bold" />
 
 </LinearLayout>

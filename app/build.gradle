@@ -83,6 +83,11 @@ dependencies {
     //Coordinatorlayout
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
 
+    //material
+    implementation 'com.google.android.material:material:1.6.1'
+
+    //viewPage2 indicato
+    implementation("com.tbuonomo:dotsindicator:4.3")
 
 
 }

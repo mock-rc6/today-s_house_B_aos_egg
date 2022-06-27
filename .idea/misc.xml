@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable-v24/rectangle_all_corner_radius.xml" value="0.2265" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable-v24/white_ background.xml" value="0.2575" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle2.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle3.xml" value="0.2265" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/selector_menu_color.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/shape_for_circle_button.xml" value="0.228" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/splash_screen.xml" value="0.2265" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/white_backg.xml" value="0.2575" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_dialog.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join.xml" value="0.38108614232209737" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_login.xml" value="0.33" />

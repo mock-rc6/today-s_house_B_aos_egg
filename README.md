@@ -132,3 +132,25 @@ ViewPage2가 TabLayout 쪽 ViewPager2와 스크롤 방향이 같아서 베너가
 
 
 </details>
+
+
+<details>
+<summary>📌6월 27일 개발 일지</summary>
+
+### 1. 어제 실패한 bottomNavigation UI 개선 및 ViewPage2 indicator 추가
+<br>
+<br>
+bottomNavigation 부분은 제가 너무 어렵게 생각해서 오래 걸린 듯 합니다.<br>
+XML 부분에서 bottomNavigation 부분에서 자식뷰에 버튼을 넣어서 배치를 해줘서 BottomSheetDialog가 나오도록 구현을 하였습니다.
+<br>
+<br>
+ViewPage2 indicator는 라이브러리를 이용해 넣어줬습니다.
+
+
+<br>
+<img src = "https://user-images.githubusercontent.com/76811495/175862656-78aa511d-247d-44a5-9bb6-27e0893c76e3.png" width="width 30px" height="height 30%">
+
+
+
+
+</details>

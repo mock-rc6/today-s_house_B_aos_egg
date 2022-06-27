@@ -44,6 +44,22 @@
 
             </com.example.todayhome.util.NestedScrollableHost>
 
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/viewPager2Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dampingRatio="0.5"
+                app:dotsCornerRadius="20dp"
+                app:dotsSize="6dp"
+                app:dotsColor="#FFFFFF"
+                app:dotsSpacing="2dp"
+                app:dotsStrokeWidth="1dp"
+                app:stiffness="300"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="20dp"/>
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
