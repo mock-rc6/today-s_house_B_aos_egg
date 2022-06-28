@@ -176,7 +176,17 @@ Retrofit 할때 @GET만 해보고 넘어간 게 이렇게 스노우볼이 굴러
 <br>
 <img src = "https://user-images.githubusercontent.com/76811495/176194129-b2b6d384-4c97-4776-bd75-963855ae488f.PNG" width="width 30px" height="height 30%">
 
-
+★22-06-29 로그인,회원가입 구현
+하루종일 로그인, 회원가입을 붙잡고 있었는데 아무리 해도 구현이 안되서 의기소침해 있었는데<br>
+Log를 하나씩 찍던 중 뭔가 이상한점이 발견했습니다.
+<br>
+<br>
+<img src = "https://user-images.githubusercontent.com/76811495/176215260-2c6f2680-6e92-4381-b77f-aacf2e56ab6a.PNG" width="width 30px" height="height 30%">
+<br>
+<br>
+바로 회원가입 하는 부분에서 패스워드가 로그에 찍혀야 하는데 닉네임이 로그에 찍혀있었습니다.
+<br> 그래서 바로 data class에서 name과 password 위치를 바꿔주었더니 정상적으로 되었습니다.
+retrofit에 대한 공부와 API명세서를 제대로 안보고 무지성으로 코딩한 제 잘못입니다.
 
 
 

@@ -8,14 +8,13 @@ import android.widget.Toast
 import com.example.todayhome.config.*
 import com.example.todayhome.databinding.ActivityEmailJoinBinding
 
-class Email_join_Activity : AppCompatActivity(), SignUpView {
+class Email_join_Activity : AppCompatActivity() , SignUpView{
 
-    private val binding: ActivityEmailJoinBinding by lazy {
-        ActivityEmailJoinBinding.inflate(layoutInflater)
-    }
+    lateinit var binding:  ActivityEmailJoinBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityEmailJoinBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.emailLoginArrowButton.setOnClickListener {
@@ -61,13 +60,12 @@ class Email_join_Activity : AppCompatActivity(), SignUpView {
 
 
 
-        Log.d("Email_join_Activity", "성공")
+
 
         val authService = AuthService()
         authService.setSignUpView(this)
-
         authService.signUp(getUser())
-
+        Log.d("Email_join_Activity", "성공")
     }
 
     override fun onSignUpSuccess() {
@@ -76,7 +74,7 @@ class Email_join_Activity : AppCompatActivity(), SignUpView {
 
 
     override fun onSignUpFailure() {
-
+        Toast.makeText(this, "실패", Toast.LENGTH_SHORT).show()
     }
 
 

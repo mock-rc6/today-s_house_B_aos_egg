@@ -29,12 +29,12 @@ class AuthService {
                     val signUpResponse: ResponseLogin = response.body()!!
 
                     Log.d("SIGNUP-RESPONSE", signUpResponse.toString())
+                    Log.d("코난", signUpResponse.code.toString())
+                    Log.d("코난", user.password)
+                    when (signUpResponse.code) {
 
-                    when (val code = signUpResponse.code) {
                         1000 -> signUpView.onSignUpSuccess()
-                        2016, 2017 -> {
-                            signUpView.onSignUpFailure()
-                        }
+
                     }
                 }
             }
