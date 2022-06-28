@@ -164,3 +164,20 @@ ViewPage2 indicator는 라이브러리를 이용해 넣어줬습니다.
 
 
 </details>
+
+<details>
+<summary>📌6월 28일 개발 일지 </summary>
+오늘은 서버분이 만들어 놓은 API를 엮어 볼려고 했는데 실패를 했습니다.
+어제 조이님이 삽질하지 말라고 했는데 데이터가 불러와 져서 조금만 하면 될 거 같았는데 결국 삽질해서 오늘 시간 분배를 실패했습니다.
+제가 Retrofit 다루는 기술이 많이 미흡한 거 같습니다.
+Retrofit 할때 @GET만 해보고 넘어간 게 이렇게 스노우볼이 굴러온 거 같습니다. 오늘은 결과적으로 1개의 API(/app/store 스토어 메인화면)만 연동하는데 성공 하였습니다.
+<br>
+<br>
+<br>
+<img src = "https://user-images.githubusercontent.com/76811495/176194129-b2b6d384-4c97-4776-bd75-963855ae488f.PNG" width="width 30px" height="height 30%">
+
+
+
+
+
+</details>

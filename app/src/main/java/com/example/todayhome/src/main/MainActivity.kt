@@ -2,6 +2,7 @@ package com.example.todayhome.src.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.ourtable.recipe.Home_service_Fragment
 import com.example.ourtable.store.StoreFragment
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private lateinit var callbackManager:CallbackManager
+    private lateinit var callbackManager: CallbackManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -26,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val myPage = MyPageFragment()
         val home_service = Home_service_Fragment()
         val store = StoreFragment()
-
 
 
         val bottomSheetView = layoutInflater.inflate(R.layout.activity_dialog, null)
@@ -49,11 +49,9 @@ class MainActivity : AppCompatActivity() {
         binding.plusButton.setOnClickListener {
             bottomSheetDialog.show()
         }
+        Log.d("Main/JWT", getJwt().toString())
 
     }
-
-
-
 
 
     private fun replaceFragment(fragment: Fragment) {
@@ -64,6 +62,11 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
+    private fun getJwt(): String? {
+        val spf = this.getSharedPreferences("auth2" , AppCompatActivity.MODE_PRIVATE)
+
+        return spf!!.getString("jwt", "")
+    }
 
 
 }

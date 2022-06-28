@@ -157,13 +157,15 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/edittext_rounded_corner_rectangle"
                 android:hint="별명(중복 불가)"
-                android:inputType="textWebPassword"
+                android:inputType="text"
                 android:paddingStart="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edit_password2"
                 app:layout_constraintWidth_default="percent"
                 app:layout_constraintWidth_percent="0.9" />
+
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_Accept"
@@ -412,6 +414,37 @@
                 android:text="로그인하기"
                 android:textStyle="bold"
                 android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_rounded_corner_rectangle"
+                android:hint="남"
+                android:inputType="text"
+                android:paddingStart="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signUpButton"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <EditText
+                android:id="@+id/bornYear"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_rounded_corner_rectangle"
+                android:hint="남"
+                android:inputType="text"
+                android:paddingStart="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gender"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.9" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
