@@ -34,7 +34,7 @@ class AuthService {
                     when (signUpResponse.code) {
 
                         1000 -> signUpView.onSignUpSuccess()
-
+                        else -> signUpView.onSignUpFailure()
                     }
                 }
             }

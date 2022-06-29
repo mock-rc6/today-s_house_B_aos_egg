@@ -16,6 +16,12 @@
 
     </string>
 
+    <string name="hint">
+        회원가입 시 입력한 정보가 기억나지 않는다면?\n
+        <html><font color="#FF0000">고객센터 문의하기(1670-0876)</font></html>
+
+    </string>
+
     <string name="age_string">
 
         <html>만 14세 이상입니다.<font color="#38D0F2" size="10">(필수)</font></html>

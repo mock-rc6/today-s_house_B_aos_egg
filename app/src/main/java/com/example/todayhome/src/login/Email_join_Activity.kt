@@ -1,21 +1,25 @@
 package com.example.todayhome.src.login
 
+
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.todayhome.config.*
 import com.example.todayhome.databinding.ActivityEmailJoinBinding
+
 
 class Email_join_Activity : AppCompatActivity() , SignUpView{
 
     lateinit var binding:  ActivityEmailJoinBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEmailJoinBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         binding.emailLoginArrowButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -28,20 +32,23 @@ class Email_join_Activity : AppCompatActivity() , SignUpView{
         }
 
 
+
+
+
     }
 
     private fun getUser(): User {
         val email: String = binding.editEmail.text.toString()
         val pwd: String = binding.editPassword.text.toString()
         val name: String = binding.editNickname.text.toString()
-        val gender: String = binding.gender.text.toString()
-        val bornYear: Int = binding.bornYear.text.toString().toInt()
+        val gender = "male"
+        val bornYear:Int= 1999
         return User(email, pwd, name,gender,bornYear)
     }
 
     private fun signUp() {
         if (binding.editEmail.text.toString().isEmpty()) {
-            Toast.makeText(this, "이메일 형식이 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+          
             return
         }
 

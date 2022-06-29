@@ -17,16 +17,16 @@ val StoreHomeBannerItemList = listOf(
 )
 
 val StoreHomeGridItemList = listOf(
-    menuGridItem(R.drawable.g1, "키친핫세일"),
-    menuGridItem(R.drawable.g2, "키즈페어"),
-    menuGridItem(R.drawable.g3, "펫위크"),
-    menuGridItem(R.drawable.g4, "할인생활"),
-    menuGridItem(R.drawable.g5, "빠른배송"),
-    menuGridItem(R.drawable.g6, "신상특가"),
-    menuGridItem(R.drawable.g7, "오!굿즈"),
-    menuGridItem(R.drawable.g8, "리퍼마켓"),
-    menuGridItem(R.drawable.g9, "프리미엄"),
-    menuGridItem(R.drawable.g10, "LG쇼핑"),
+    menuGridItem(R.drawable.grid1, "키친핫세일"),
+    menuGridItem(R.drawable.grid2, "키즈페어"),
+    menuGridItem(R.drawable.grid3, "펫위크"),
+    menuGridItem(R.drawable.grid4, "생필품핫딜"),
+    menuGridItem(R.drawable.grid5, "리퍼마켓"),
+    menuGridItem(R.drawable.grid6, "신상특가"),
+    menuGridItem(R.drawable.grid7, "오!굿즈"),
+    menuGridItem(R.drawable.grid8, "빠른배송"),
+    menuGridItem(R.drawable.grid9, "프리미엄"),
+    menuGridItem(R.drawable.grid10, "캠핑용품"),
 )
 
 val StoreHomeGridItemList2 = listOf(

@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:theme="@style/Widget.BottomNavigationView"
+
         android:clipChildren="false"
         app:menu="@menu/bottom_navigation" >
 

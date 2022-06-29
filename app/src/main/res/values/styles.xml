@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.BottomNavigationView"
-        parent="Widget.Design.BottomNavigationView">
-        <item name="fontFamily">@font/marufont</item>
-        <item name="android:minHeight">0dp</item>
-    </style>
-
     <style name="fragmentHomeTabText" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!--        폰트크기-->
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
 
         <!--        폰트스타일-->
         <item name="android:textStyle">bold</item>
@@ -36,5 +31,13 @@
         <!--        텍스트 색상 변경-->
         <item name="colorPrimary">#44AAFB</item>
     </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/design_default_color_primary</item>
+        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
+        <item name="colorAccent">@color/design_default_color_error</item>
+    </style>
+
     
 </resources>

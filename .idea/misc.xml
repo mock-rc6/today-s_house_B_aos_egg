@@ -34,6 +34,7 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail.xml" value="0.22" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_dialog.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join.xml" value="0.3375959079283887" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join2.xml" value="0.3151041666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_login.xml" value="0.33" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_grid_menu_layout.xml" value="1.1" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_grid_menu_layout2.xml" value="0.36614583333333334" />
@@ -47,11 +48,14 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_houses.xml" value="0.3619791666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_know_how.xml" value="0.3619791666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page.xml" value="0.3515625" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_my_shopping.xml" value="0.36614583333333334" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_profile.xml" value="0.36614583333333334" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_photo.xml" value="0.19895833333333332" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_premium.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_questions.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_recipe.xml" value="0.3515625" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_store.xml" value="0.33" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_store_home.xml" value="0.33" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_store.xml" value="0.5214384508990318" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_store_home.xml" value="0.31727574750830567" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_style.xml" value="0.35052083333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_today_sale.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_weekend.xml" value="0.36614583333333334" />
