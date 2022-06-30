@@ -212,3 +212,22 @@ retrofit에 대한 공부와 API명세서를 제대로 안보고 무지성으로
 
 
 </details>
+
+<details>
+<summary>📌6월 30일 개발 일지 </summary>
+오늘은 스트리홈에 오늘의 딜, 최근 본 상품, 내가 본 상품의 연관 상품, ~님을 위한 상품 부분을 서버분이 만들어 주신<br>
+데이터로 viewPage2를 만들었습니다.
+
+<br>
+상품을 클릭을 하고 상세페이지까지 가는거 까지 구현을 하였고 내일 상세페이지를 구현을 하겠습니다.
+<br>
+<br>
+<br>
+<img src = "https://user-images.githubusercontent.com/76811495/176689209-75c57dca-957b-4997-a90a-bc0155e8a685.PNG" width="width 30px" height="height 30%">
+<br>
+<br>
+<br>
+<img src = "https://user-images.githubusercontent.com/76811495/176689509-6329e5d1-2ba1-42fd-a108-c69c2fa81d00.PNG" width="width 30px" height="height 30%">
+
+
+</details>

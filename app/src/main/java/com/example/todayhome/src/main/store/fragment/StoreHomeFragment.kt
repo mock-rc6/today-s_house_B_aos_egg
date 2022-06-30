@@ -83,9 +83,9 @@ class StoreHomeFragment : Fragment() {
         binding.viewPager2Indicator.attachTo(binding.viewPager2)
 
         binding.toDayDillViewPage2.adapter = viewPagerAdapter2
-
-
-
+        binding.recentItemViewPage2.adapter = viewPagerAdapter2
+        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
+        binding.myItemViewPage2.adapter = viewPagerAdapter2
 
         val retrofit = Retrofit.Builder()
             .baseUrl("https://prod.rc-rising-test-6th.shop/")
@@ -199,6 +199,31 @@ class StoreHomeFragment : Fragment() {
         binding.toDayDillViewPage2.offscreenPageLimit = 2
         binding.toDayDillViewPage2.adapter = viewPagerAdapter2
         binding.toDayDillViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        binding.recentItemViewPage2.setPageTransformer { page, position ->
+            page.translationX = position * -offsetPx
+        }
+
+        binding.recentItemViewPage2.offscreenPageLimit = 2
+        binding.recentItemViewPage2.adapter = viewPagerAdapter2
+        binding.recentItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        binding.RelationItemViewPage2.setPageTransformer { page, position ->
+            page.translationX = position * -offsetPx
+        }
+
+        binding.RelationItemViewPage2.offscreenPageLimit = 2
+        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
+        binding.RelationItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        binding.myItemViewPage2.setPageTransformer { page, position ->
+            page.translationX = position * -offsetPx
+        }
+
+        binding.myItemViewPage2.offscreenPageLimit = 2
+        binding.myItemViewPage2.adapter = viewPagerAdapter2
+        binding.myItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
 
     }
 
