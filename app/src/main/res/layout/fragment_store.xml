@@ -73,7 +73,7 @@
                         app:layout_constraintStart_toEndOf="@id/edit_search"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintWidth_default="percent"
-                        app:tint="@color/gray_93" />
+                        app:tint="#545454" />
 
                     <ImageButton
                         android:id="@+id/shoppingButton"
@@ -90,7 +90,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintWidth_default="percent"
                         app:layout_constraintWidth_percent="0.1"
-                        app:tint="@color/gray_93" />
+                        app:tint="#545454" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

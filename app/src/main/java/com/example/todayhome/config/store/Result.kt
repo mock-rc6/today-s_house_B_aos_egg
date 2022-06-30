@@ -3,7 +3,6 @@ package com.example.todayhome.config.store
 
 import com.google.gson.annotations.SerializedName
 
-
 data class Result(
     @SerializedName("categoryIdList")
     val categoryIdList: List<Int>?,

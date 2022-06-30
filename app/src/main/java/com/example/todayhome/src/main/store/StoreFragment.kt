@@ -19,6 +19,7 @@ class StoreFragment : Fragment(R.layout.fragment_store) {
     private var _binding: FragmentStoreBinding? = null
     private val binding get() = _binding!!
 
+
     @SuppressLint("ResourceAsColor")
     override fun onCreateView(
         inflater: LayoutInflater,

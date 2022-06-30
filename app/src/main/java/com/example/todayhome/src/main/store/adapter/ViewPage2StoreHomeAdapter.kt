@@ -15,7 +15,6 @@ import com.example.todayhome.R
 import com.example.todayhome.config.store.EventImg
 
 
-
 class ViewPage2StoreHomeAdapter(private val itemClickedListener: (EventImg) -> Unit): ListAdapter<EventImg, ViewPage2StoreHomeAdapter.ItemViewHolder>(differ) {
     inner class ItemViewHolder(val view:View):RecyclerView.ViewHolder(view){
         fun bind(row: EventImg){

@@ -12,10 +12,10 @@
 
     <ImageView
         android:id="@+id/iv_grid_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="64dp"
+        android:layout_height="62dp"
         android:scaleType="fitXY"
-        tools:src="@drawable/g1" />
+        tools:src="@drawable/grid3" />
 
 
     <TextView

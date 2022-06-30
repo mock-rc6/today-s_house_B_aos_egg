@@ -7,20 +7,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.size
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.todayhome.R
+import com.example.todayhome.config.store.TodaysDeal
 import com.example.todayhome.config.store.api.StoreService
 import com.example.todayhome.config.store.storeAPI
 import com.example.todayhome.databinding.FragmentStoreHomeBinding
+import com.example.todayhome.src.main.HomeFragment.HomeFragment
 import com.example.todayhome.src.main.store.DetailActivity
+import com.example.todayhome.src.main.store.StoreHomeTodayDillActivity
 import com.example.todayhome.src.main.store.adapter.GridMenuStoreHomeAdapter
 import com.example.todayhome.src.main.store.adapter.GridMenuStoreHomeAdapter2
 import com.example.todayhome.src.main.store.adapter.ViewPage2StoreHomeAdapter
+import com.example.todayhome.src.main.store.adapter.ViewPager2TodayDillAdapter
 import com.example.todayhome.src.main.store.data.StoreHomeBannerItemList
 import com.example.todayhome.src.main.store.data.StoreHomeGridItemList
 import com.example.todayhome.src.main.store.data.StoreHomeGridItemList2
@@ -45,12 +48,21 @@ class StoreHomeFragment : Fragment() {
 
     private val viewPagerAdapter = ViewPage2StoreHomeAdapter(itemClickedListener = {
         val intent = Intent(activity, DetailActivity::class.java)
-        intent.putExtra("cookModel2", it)
+        intent.putExtra("bannerModel", it)
+        startActivity(intent)
+    })
+
+    private val viewPagerAdapter2 = ViewPager2TodayDillAdapter(itemClickedListener = {
+        val intent = Intent(activity, StoreHomeTodayDillActivity::class.java)
+        intent.putExtra("todayModel", it)
         startActivity(intent)
     })
 
     private lateinit var storeservice: StoreService
     private lateinit var gridRecyclerViewAdapter: GridMenuStoreHomeAdapter
+    private lateinit var gridRecyclerViewAdapter2: GridMenuStoreHomeAdapter2
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,8 +75,18 @@ class StoreHomeFragment : Fragment() {
         viewModel.setGridItems2(StoreHomeGridItemList2)
 
 
+
+
+
+
         binding.viewPager2.adapter = viewPagerAdapter
         binding.viewPager2Indicator.attachTo(binding.viewPager2)
+
+        binding.toDayDillViewPage2.adapter = viewPagerAdapter2
+
+
+
+
         val retrofit = Retrofit.Builder()
             .baseUrl("https://prod.rc-rising-test-6th.shop/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -83,8 +105,9 @@ class StoreHomeFragment : Fragment() {
                     }
 
                     response.body()?.let { it ->
-//                        Log.d(HomeFragment.TAG, it.toString())
+                        Log.d("코난", it.result?.todaysDealList.toString())
                         viewPagerAdapter.submitList(it.result?.eventImgs)
+                        viewPagerAdapter2.submitList(it.result?.todaysDealList)
                     }
 
                 }
@@ -125,12 +148,14 @@ class StoreHomeFragment : Fragment() {
 
     }
 
+
         initViewPager2()
         subscribeObservers()
+        viewPage2side()
         return binding.root
     }
 
-
+    // Grid
     private fun initViewPager2() {
         binding.menuRecyclerView.apply {
             gridRecyclerViewAdapter = GridMenuStoreHomeAdapter()
@@ -138,20 +163,47 @@ class StoreHomeFragment : Fragment() {
             adapter = gridRecyclerViewAdapter
         }
 
-    }
+        binding.itemMenuRecyclerView.apply {
+            gridRecyclerViewAdapter2 = GridMenuStoreHomeAdapter2()
+            layoutManager = GridLayoutManager(context, 4)
+            adapter = gridRecyclerViewAdapter2
+        }
 
+    }
+// Grid
     private fun subscribeObservers() {
 
         viewModel.gridItemList.observe(viewLifecycleOwner, Observer {gridItemList->
             gridRecyclerViewAdapter.submitList(gridItemList)
         })
 
+        viewModel.gridItemList2.observe(viewLifecycleOwner, Observer {gridItemList2->
+            gridRecyclerViewAdapter2.submitList(gridItemList2)
+        })
+
 
 
     }
 
+    // 오늘의 딜 오른쪽 보이게 하기
+    private fun viewPage2side() {
+        val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin)
+        val pagerWidth = resources.getDimensionPixelOffset(R.dimen.pageWidth)
+        val screenWidth = resources.displayMetrics.widthPixels
+        val offsetPx = screenWidth - pageMarginPx - pagerWidth
+
+        binding.toDayDillViewPage2.setPageTransformer { page, position ->
+            page.translationX = position * -offsetPx
+        }
+
+        binding.toDayDillViewPage2.offscreenPageLimit = 2
+        binding.toDayDillViewPage2.adapter = viewPagerAdapter2
+        binding.toDayDillViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+    }
 
 
+// 상당 뷰페이저 1초마다 이동
     fun scrollJobCreate() {
         job = lifecycleScope.launchWhenResumed {
             delay(1500)

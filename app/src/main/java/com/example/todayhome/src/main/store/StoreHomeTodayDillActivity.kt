@@ -1,18 +1,17 @@
 package com.example.todayhome.src.main.store
 
-
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
 import com.bumptech.glide.Glide
+import com.example.todayhome.R
 import com.example.todayhome.config.store.EventImg
-
+import com.example.todayhome.config.store.TodaysDeal
 import com.example.todayhome.databinding.ActivityDetailBinding
+import com.example.todayhome.databinding.ActivityStoreHomeTodayDillBinding
 
-class DetailActivity : AppCompatActivity() {
-    private val binding: ActivityDetailBinding by lazy {
-        ActivityDetailBinding.inflate(layoutInflater)
+class StoreHomeTodayDillActivity : AppCompatActivity() {
+    private val binding: ActivityStoreHomeTodayDillBinding by lazy {
+        ActivityStoreHomeTodayDillBinding.inflate(layoutInflater)
     }
 
 
@@ -22,7 +21,7 @@ class DetailActivity : AppCompatActivity() {
 
 
 
-        val model = intent.getParcelableExtra<EventImg>("bannerModel")
+        val model = intent.getParcelableExtra<TodaysDeal>("todayModel")
 
 
 
@@ -33,11 +32,11 @@ class DetailActivity : AppCompatActivity() {
 
     }
 
-    private fun gliderecipeImageView(model: EventImg?) {
+    private fun gliderecipeImageView(model: TodaysDeal?) {
 
         if (model != null) {
             Glide.with(binding.coverImageView.context)
-                .load(model.storeEventImgUrl.orEmpty())
+                .load(model.hotDealThumbnail.orEmpty())
                 .into(binding.coverImageView)
         }
 

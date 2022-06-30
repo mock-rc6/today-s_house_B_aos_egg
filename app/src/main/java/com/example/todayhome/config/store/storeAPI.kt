@@ -1,11 +1,7 @@
 package com.example.todayhome.config.store
 
 
-
 import com.google.gson.annotations.SerializedName
-
-
-
 
 data class storeAPI(
     @SerializedName("code")
@@ -15,5 +11,5 @@ data class storeAPI(
     @SerializedName("message")
     val message: String?,
     @SerializedName("result")
-    val result:  Result?
+    val result: Result?
 )

@@ -1,8 +1,11 @@
 package com.example.todayhome.config.store
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class TodaysDeal(
     @SerializedName("companyId")
     val companyId: Int?,
@@ -10,6 +13,8 @@ data class TodaysDeal(
     val companyName: String?,
     @SerializedName("due")
     val due: String?,
+    @SerializedName("hotDealThumbnail")
+    val hotDealThumbnail: String?,
     @SerializedName("itemId")
     val itemId: Int?,
     @SerializedName("itemName")
@@ -26,4 +31,4 @@ data class TodaysDeal(
     val subCategory: String?,
     @SerializedName("subCategoryId")
     val subCategoryId: Int?
-)
+): Parcelable
