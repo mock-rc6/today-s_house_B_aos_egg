@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,17 +12,64 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="@color/white"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <!-- parallax: 스크롤 시 접힘 -->
-            <androidx.appcompat.widget.AppCompatImageView
-                android:src="@drawable/grid3"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topConstraint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                app:layout_collapseMode="parallax"/>
+                android:background="@color/white"
+                android:paddingTop="9dp"
+                android:paddingEnd="9dp"
+                android:paddingBottom="7dp"
+                app:layout_collapseMode="parallax"
+                app:layout_constraintWidth_default="percent">
 
+                <ImageButton
+                    android:id="@+id/settingButton"
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="#fff"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/setting1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/connectButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#545454" />
+
+                <ImageButton
+                    android:id="@+id/connectButton"
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="#fff"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/setting2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/shoppingButton"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:tint="#545454" />
+
+                <ImageButton
+                    android:id="@+id/shoppingButton"
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="13dp"
+                    android:background="#fff"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/storetop1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#545454" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -30,7 +78,15 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:theme="@style/fragmentHomeTabText"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#35C5F0"
+            app:tabIndicatorHeight="3dp"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextAppearance="@style/tabTextSizeBold" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -38,9 +94,9 @@
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:saveEnabled="false"
         android:nestedScrollingEnabled="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        android:saveEnabled="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,15 +1,15 @@
 package com.example.todayhome.src.main.my_page
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
 import com.example.todayhome.R
 import com.example.todayhome.databinding.FragmentMyPageBinding
-import com.example.todayhome.src.main.HomeFragment.TabLayoutViewPagerAdapter
+import com.example.todayhome.src.main.my_page.adapter.MyPageTabLayoutViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -38,7 +38,10 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
 
         val tabName = arrayOf("프로필", "나의 쇼핑", )
 
-
+        binding.settingButton.setOnClickListener {
+            val intent = Intent(activity, SettingActivity::class.java)
+            startActivity(intent)
+        }
         TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
             tab.text = tabName[position]
         }.attach()
@@ -56,6 +59,8 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
             override fun onTabReselected(tab: TabLayout.Tab?) {
             }
         })
+
+
 
 
     }

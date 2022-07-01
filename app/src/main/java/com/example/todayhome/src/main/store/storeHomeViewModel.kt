@@ -3,6 +3,7 @@ package com.example.todayhome.src.main.store
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.todayhome.src.main.store.data.PopularSearch
 import com.example.todayhome.src.main.store.data.StoreHomeBannerItem
 import com.example.todayhome.src.main.store.data.menuGridItem
 import com.example.todayhome.src.main.store.data.menuGriditem2
@@ -11,6 +12,8 @@ class storeHomeViewModel : ViewModel() {
     private val _bannerItemList: MutableLiveData<List<StoreHomeBannerItem>> = MutableLiveData()
     private val _gridItemList: MutableLiveData<List<menuGridItem>> = MutableLiveData()
     private val _gridItemList2: MutableLiveData<List<menuGriditem2>> = MutableLiveData()
+    private val popularSearch: MutableLiveData<List<PopularSearch>> = MutableLiveData()
+
 
     val bannerItemList: LiveData<List<StoreHomeBannerItem>>
         get() = _bannerItemList
@@ -34,6 +37,14 @@ class storeHomeViewModel : ViewModel() {
 
     fun setGridItems2(list: List<menuGriditem2>) {
         _gridItemList2.value = list
+    }
+
+    val gridItemList3: LiveData<List<PopularSearch>>
+        get() = popularSearch
+
+
+    fun setGridItems3(list: List<PopularSearch>) {
+        popularSearch.value = list
     }
 
 }

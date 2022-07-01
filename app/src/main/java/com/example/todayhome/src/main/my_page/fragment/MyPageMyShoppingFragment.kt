@@ -1,4 +1,4 @@
-package com.example.todayhome.src.main.my_page
+package com.example.todayhome.src.main.my_page.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

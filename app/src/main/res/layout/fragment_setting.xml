@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.main.my_page.SettingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent">
+
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FF0000"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:tint="#424242" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="설정"
+            android:textColor="#424242"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.27" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topConstraint">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/profileCorrectionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="프로필수정"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/profileCorrectionTextView" />
+
+            <TextView
+                android:id="@+id/customSettingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="맞춤정보 설정"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/customSettingTextView" />
+
+            <TextView
+                android:id="@+id/passwordChangeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="비밀번호 변경"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/passwordChangeTextView" />
+
+            <TextView
+                android:id="@+id/myActivityTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="내 활동"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view4" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/myActivityTextView" />
+
+            <TextView
+                android:id="@+id/autoplayTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="자동 재생 설정"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view5" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/autoplayTextView" />
+
+            <TextView
+                android:id="@+id/noticeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="알림 설정"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view6" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/noticeTextView" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/view7" />
+
+            <TextView
+                android:id="@+id/todayHomeInfoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="오늘의집이 궁금해요"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/todayHomeInfoTextView" />
+
+            <TextView
+                android:id="@+id/NoticeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="공지사항"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view9" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/NoticeTextView" />
+
+            <TextView
+                android:id="@+id/FAQTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="자주 묻는 질문"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view10" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/FAQTextView" />
+
+            <TextView
+                android:id="@+id/sendCommentsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="의견 보내기"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view11" />
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#fff"
+                app:layout_constraintTop_toBottomOf="@id/sendCommentsTextView" />
+
+            <TextView
+                android:id="@+id/ServiceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="서비스 이용 약관"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view12" />
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/ServiceTextView" />
+
+            <TextView
+                android:id="@+id/PrivacyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="개인정보처리방침"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view13" />
+
+            <View
+                android:id="@+id/view14"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/PrivacyTextView" />
+
+            <TextView
+                android:id="@+id/versionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="버전정보     v9.106.0"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view14" />
+
+            <View
+                android:id="@+id/view15"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@id/versionTextView" />
+
+            <TextView
+                android:id="@+id/logoutTextView"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:gravity="center|start"
+                android:paddingStart="17dp"
+                android:paddingTop="7dp"
+                android:text="로그아웃"
+                android:textColor="#424242"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/view15" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

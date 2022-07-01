@@ -11,5 +11,5 @@
     <color name="gray_93">#939393</color>
     <color name="windowsBackground">#fff</color>
     <color name="gray_cc">#cccccc</color>
-
+    <color name="password_error">#FF7878</color>
 </resources>

@@ -1,6 +1,8 @@
 package com.example.todayhome.config
 
-interface SignUpView {
-    fun onSignUpSuccess()
+interface ChangeView {
+
+
+    fun onSignUpSuccess(code:Int)
     fun onSignUpFailure()
 }

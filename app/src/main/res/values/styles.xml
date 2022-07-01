@@ -12,6 +12,12 @@
 
     </style>
 
+    <style name="tabTextSizeBold" parent="TextAppearance.Design.Tab">
+
+        <item name="android:textStyle">bold</item>
+    </style>
+    출처: https://curryyou.tistory.com/432 [카레유:티스토리]
+
     <style name="fragmentHomeMusicTabText" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!--        폰트크기-->
         <item name="android:textSize">11sp</item>

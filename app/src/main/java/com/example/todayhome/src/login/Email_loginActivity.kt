@@ -55,7 +55,7 @@ class Email_loginActivity : AppCompatActivity(), LoginView {
         val authService = AuthService()
         authService.setLoginView(this)
 
-        authService.login(User(email, password, "", "", null))
+        authService.login(User(email, password, "", ))
 
 
     }

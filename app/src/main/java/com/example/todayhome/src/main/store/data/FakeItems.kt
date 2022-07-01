@@ -47,3 +47,16 @@ val StoreHomeGridItemList2 = listOf(
     menuGriditem2(R.drawable.b15),
     menuGriditem2(R.drawable.b16),
 )
+
+val PopularGridItemList = listOf(
+    PopularSearch("1",R.drawable.up,"라틴조명"),
+    PopularSearch("2",R.drawable.down,"마샬"),
+    PopularSearch("3",R.drawable.up,"베개 커버"),
+    PopularSearch("4",R.drawable.updown,"냉장고 정리"),
+    PopularSearch("5",R.drawable.updown,"인테리어 액자"),
+    PopularSearch("6",R.drawable.updown,"샌드토리웨건"),
+    PopularSearch("7",R.drawable.up,"경추베개"),
+    PopularSearch("8",R.drawable.updown,"레고"),
+    PopularSearch("9",R.drawable.down,"무인양품"),
+    PopularSearch("10",R.drawable.updown,"마샬스피커"),
+)

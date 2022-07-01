@@ -17,6 +17,19 @@
         android:theme="@style/Theme.TodayHome"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+
+
+        <activity
+            android:name=".src.main.my_page.passwordChangeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".src.main.my_page.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".src.main.store.DetailPopularActivity"
+            android:exported="false" />
         <activity
             android:name=".src.main.store.StoreHomeTodayDillActivity"
             android:exported="false" />
@@ -33,19 +46,19 @@
             android:name=".src.main.store.store_home_Item_layout_banner"
             android:exported="false" />
         <activity
-            android:name="com.example.todayhome.src.login.LoginActivity"
+            android:name=".src.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.todayhome.src.login.NonMembersActivity"
+            android:name=".src.login.NonMembersActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.todayhome.src.login.Email_join_Activity"
+            android:name=".src.login.Email_join_Activity"
             android:exported="false" />
         <activity
-            android:name="com.example.todayhome.src.login.Password_reset_Activity"
+            android:name=".src.login.Password_reset_Activity"
             android:exported="false" />
         <activity
-            android:name="com.example.todayhome.src.login.Email_loginActivity"
+            android:name=".src.login.Email_loginActivity"
             android:exported="false" />
         <activity
             android:name=".src.main.MainActivity"

@@ -13,20 +13,15 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.todayhome.R
-import com.example.todayhome.config.store.TodaysDeal
 import com.example.todayhome.config.store.api.StoreService
 import com.example.todayhome.config.store.storeAPI
 import com.example.todayhome.databinding.FragmentStoreHomeBinding
-import com.example.todayhome.src.main.HomeFragment.HomeFragment
+
 import com.example.todayhome.src.main.store.DetailActivity
+import com.example.todayhome.src.main.store.DetailPopularActivity
 import com.example.todayhome.src.main.store.StoreHomeTodayDillActivity
-import com.example.todayhome.src.main.store.adapter.GridMenuStoreHomeAdapter
-import com.example.todayhome.src.main.store.adapter.GridMenuStoreHomeAdapter2
-import com.example.todayhome.src.main.store.adapter.ViewPage2StoreHomeAdapter
-import com.example.todayhome.src.main.store.adapter.ViewPager2TodayDillAdapter
-import com.example.todayhome.src.main.store.data.StoreHomeBannerItemList
-import com.example.todayhome.src.main.store.data.StoreHomeGridItemList
-import com.example.todayhome.src.main.store.data.StoreHomeGridItemList2
+import com.example.todayhome.src.main.store.adapter.*
+import com.example.todayhome.src.main.store.data.*
 import com.example.todayhome.src.main.store.storeHomeViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -58,9 +53,14 @@ class StoreHomeFragment : Fragment() {
         startActivity(intent)
     })
 
+
+
     private lateinit var storeservice: StoreService
     private lateinit var gridRecyclerViewAdapter: GridMenuStoreHomeAdapter
     private lateinit var gridRecyclerViewAdapter2: GridMenuStoreHomeAdapter2
+    private lateinit var gridRecyclerViewAdapter3: PopularSearchAdapter
+
+    private lateinit var popularAdapter: PopularItemAdapter
 
 
 
@@ -69,23 +69,20 @@ class StoreHomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentStoreHomeBinding.inflate(inflater, container, false)
-        viewModel = ViewModelProvider(this).get(storeHomeViewModel::class.java)
+        viewModel = ViewModelProvider(this)[storeHomeViewModel::class.java]
         viewModel.setBannerItems(StoreHomeBannerItemList)
         viewModel.setGridItems(StoreHomeGridItemList)
         viewModel.setGridItems2(StoreHomeGridItemList2)
-
-
-
-
-
+        viewModel.setGridItems3(PopularGridItemList)
 
         binding.viewPager2.adapter = viewPagerAdapter
         binding.viewPager2Indicator.attachTo(binding.viewPager2)
 
         binding.toDayDillViewPage2.adapter = viewPagerAdapter2
-        binding.recentItemViewPage2.adapter = viewPagerAdapter2
-        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
-        binding.myItemViewPage2.adapter = viewPagerAdapter2
+//        binding.recentItemViewPage2.adapter = viewPagerAdapter2
+//        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
+//        binding.myItemViewPage2.adapter = viewPagerAdapter2
+        initPopularRecyclerView()
 
         val retrofit = Retrofit.Builder()
             .baseUrl("https://prod.rc-rising-test-6th.shop/")
@@ -108,6 +105,8 @@ class StoreHomeFragment : Fragment() {
                         Log.d("코난", it.result?.todaysDealList.toString())
                         viewPagerAdapter.submitList(it.result?.eventImgs)
                         viewPagerAdapter2.submitList(it.result?.todaysDealList)
+                        popularAdapter.submitList(it.result?.todaysDealList)
+
                     }
 
                 }
@@ -127,7 +126,7 @@ class StoreHomeFragment : Fragment() {
             override fun onPageScrollStateChanged(state: Int) {
                 super.onPageScrollStateChanged(state)
                 when (state) {
-                    ViewPager2.SCROLL_STATE_IDLE ->{
+                    ViewPager2.SCROLL_STATE_IDLE -> {
                         if (!job.isActive) scrollJobCreate()
                     }
 
@@ -138,7 +137,7 @@ class StoreHomeFragment : Fragment() {
             }
         })
         binding.viewPager2.apply {
-            registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
                     binding.viewPager2Indicator.attachTo(binding.viewPager2)
@@ -146,7 +145,7 @@ class StoreHomeFragment : Fragment() {
                 }
             })
 
-    }
+        }
 
 
         initViewPager2()
@@ -169,18 +168,27 @@ class StoreHomeFragment : Fragment() {
             adapter = gridRecyclerViewAdapter2
         }
 
+//        binding.popularRecyclerView.apply {
+//            gridRecyclerViewAdapter3 = PopularSearchAdapter()
+//            layoutManager = GridLayoutManager(context, 2)
+//            adapter = gridRecyclerViewAdapter3
+//        }
+
     }
-// Grid
+
+    // Grid
     private fun subscribeObservers() {
 
-        viewModel.gridItemList.observe(viewLifecycleOwner, Observer {gridItemList->
+        viewModel.gridItemList.observe(viewLifecycleOwner, Observer { gridItemList ->
             gridRecyclerViewAdapter.submitList(gridItemList)
         })
 
-        viewModel.gridItemList2.observe(viewLifecycleOwner, Observer {gridItemList2->
+        viewModel.gridItemList2.observe(viewLifecycleOwner, Observer { gridItemList2 ->
             gridRecyclerViewAdapter2.submitList(gridItemList2)
         })
-
+//        viewModel.gridItemList3.observe(viewLifecycleOwner, Observer { gridItemList3 ->
+//            gridRecyclerViewAdapter3.submitList(gridItemList3)
+//        })
 
 
     }
@@ -200,41 +208,53 @@ class StoreHomeFragment : Fragment() {
         binding.toDayDillViewPage2.adapter = viewPagerAdapter2
         binding.toDayDillViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        binding.recentItemViewPage2.setPageTransformer { page, position ->
-            page.translationX = position * -offsetPx
-        }
-
-        binding.recentItemViewPage2.offscreenPageLimit = 2
-        binding.recentItemViewPage2.adapter = viewPagerAdapter2
-        binding.recentItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
-        binding.RelationItemViewPage2.setPageTransformer { page, position ->
-            page.translationX = position * -offsetPx
-        }
-
-        binding.RelationItemViewPage2.offscreenPageLimit = 2
-        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
-        binding.RelationItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
-        binding.myItemViewPage2.setPageTransformer { page, position ->
-            page.translationX = position * -offsetPx
-        }
-
-        binding.myItemViewPage2.offscreenPageLimit = 2
-        binding.myItemViewPage2.adapter = viewPagerAdapter2
-        binding.myItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+//        binding.recentItemViewPage2.setPageTransformer { page, position ->
+//            page.translationX = position * -offsetPx
+//        }
+//
+//        binding.recentItemViewPage2.offscreenPageLimit = 2
+//        binding.recentItemViewPage2.adapter = viewPagerAdapter2
+//        binding.recentItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+//
+//        binding.RelationItemViewPage2.setPageTransformer { page, position ->
+//            page.translationX = position * -offsetPx
+//        }
+//
+//        binding.RelationItemViewPage2.offscreenPageLimit = 2
+//        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
+//        binding.RelationItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+//
+//        binding.myItemViewPage2.setPageTransformer { page, position ->
+//            page.translationX = position * -offsetPx
+//        }
+//
+//        binding.myItemViewPage2.offscreenPageLimit = 2
+//        binding.myItemViewPage2.adapter = viewPagerAdapter2
+//        binding.myItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
 
     }
 
+    private fun initPopularRecyclerView() {
+        popularAdapter = PopularItemAdapter(itemClickedListener = {
+            val intent = Intent(activity, DetailPopularActivity::class.java)
+            intent.putExtra("popular", it)
+            startActivity(intent)
+        })
 
-// 상당 뷰페이저 1초마다 이동
+        binding.popularItemRecyclerView.layoutManager = GridLayoutManager(context, 2)
+        binding.popularItemRecyclerView.adapter = popularAdapter
+    }
+
+
+    // 상당 뷰페이저 1초마다 이동
     fun scrollJobCreate() {
         job = lifecycleScope.launchWhenResumed {
             delay(1500)
             binding.viewPager2.setCurrentItem(++bannerPosition, true)
         }
     }
+
     override fun onResume() {
         super.onResume()
         scrollJobCreate()
@@ -244,8 +264,6 @@ class StoreHomeFragment : Fragment() {
         super.onPause()
         job.cancel()
     }
-
-
 
 
 }
