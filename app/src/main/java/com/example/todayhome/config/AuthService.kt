@@ -1,7 +1,9 @@
 package com.example.todayhome.config
 
+import android.icu.lang.UCharacter.GraphemeClusterBreak.L
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -12,8 +14,6 @@ class AuthService {
     private lateinit var loginView: LoginView
 
     private lateinit var changeView: ChangeView
-
-    private var number:Long =0
 
 
     fun setSignUpView(signUpView: SignUpView) {
@@ -68,7 +68,9 @@ class AuthService {
 
                     val loginResponse: ResponseLogin = response.body()!!
                     Log.d("cccc", loginResponse.toString())
-                    number= loginResponse.result?.userIdx.toString().toLong()
+
+
+
                     Log.d("코난 로그인", loginResponse.result?.userIdx.toString().toLong().toString())
                     when (val code = loginResponse.code) {
                         1000 -> loginView.onLoginSuccess(code, loginResponse.result!!)
@@ -83,16 +85,18 @@ class AuthService {
         })
     }
 
-    fun change(user: UserPassword) {
+    fun change(user: UserPassword,JWT:String,userId:Long) {
         val loginService = getRetrofit().create(RetrofitLogin::class.java)
+        Log.d("제발 성공",JWT)
 
-
-        loginService.change(number,user).enqueue(object : Callback<ResponseLogin2> {
+        Log.d("제발 성공", userId.toString())
+        loginService.change(JWT,userId,user).enqueue(object : Callback<ResponseLogin2> {
             override fun onResponse(call: Call<ResponseLogin2>, response: Response<ResponseLogin2>) {
                 if (response.isSuccessful && response.code() == 200) {
 
                     val changeResponse: ResponseLogin2 = response.body()!!
-                    Log.d("코난3", changeResponse.code.toString())
+                    Log.d("코난3", changeResponse.message)
+                    L
 
                     when (val code = changeResponse.code) {
                         1000 -> changeView.onSignUpSuccess(code)
@@ -106,4 +110,7 @@ class AuthService {
             }
         })
     }
+
+
+
 }

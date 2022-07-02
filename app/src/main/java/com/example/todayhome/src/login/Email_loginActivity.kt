@@ -61,11 +61,21 @@ class Email_loginActivity : AppCompatActivity(), LoginView {
     }
 
 
+
+
     private fun saveJwt2(jwt: String) {
         val spf = getSharedPreferences("auth2" , MODE_PRIVATE)
         val editor = spf.edit()
 
         editor.putString("jwt", jwt)
+        editor.apply()
+    }
+
+    private fun saveJwt3(jwt: Long) {
+        val spf = getSharedPreferences("auth3" , MODE_PRIVATE)
+        val editor = spf.edit()
+
+        editor.putLong("jwt", jwt)
         editor.apply()
     }
 
@@ -78,6 +88,7 @@ class Email_loginActivity : AppCompatActivity(), LoginView {
         when(code) {
             1000 -> {
                 saveJwt2(result.jwt)
+                saveJwt3(result.userIdx)
                 startMainActivity()
 
             }

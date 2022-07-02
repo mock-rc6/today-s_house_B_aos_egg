@@ -17,13 +17,12 @@
         android:theme="@style/Theme.TodayHome"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-
-
+        <activity
+            android:name=".src.main.HomeFragment.EventActivity"
+            android:exported="false" />
         <activity
             android:name=".src.main.my_page.passwordChangeActivity"
             android:exported="false" />
-
         <activity
             android:name=".src.main.my_page.SettingActivity"
             android:exported="false" />

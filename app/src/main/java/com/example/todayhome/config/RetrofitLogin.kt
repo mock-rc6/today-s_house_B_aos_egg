@@ -12,6 +12,13 @@ interface RetrofitLogin {
 
 
     @PATCH("/users/{userId}")
-    fun change(@Path("userId")userId:Long,@Body user: UserPassword) : Call<ResponseLogin2>
+    fun change(
+
+        @Header("X-ACCESS-TOKEN") JWT: String,
+        @Path("userId") userId: Long,
+        @Body user: UserPassword
+    ): Call<ResponseLogin2>
+
+
 
 }

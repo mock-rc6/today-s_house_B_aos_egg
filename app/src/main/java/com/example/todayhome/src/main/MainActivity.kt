@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         binding.plusButton.setOnClickListener {
             bottomSheetDialog.show()
         }
-        Log.d("Main/JWT", getJwt().toString())
+//        Log.d("Main/JWT", getJwt().toString())
 
     }
 
@@ -62,11 +62,11 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-    private fun getJwt(): String? {
-        val spf = this.getSharedPreferences("auth2" , AppCompatActivity.MODE_PRIVATE)
-
-        return spf!!.getString("jwt", "")
-    }
+//    private fun getJwt(): String? {
+//        val spf = this.getSharedPreferences("auth2" , AppCompatActivity.MODE_PRIVATE)
+//
+//        return spf!!.getString("jwt", "")
+//    }
 
 
 }

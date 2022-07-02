@@ -1,9 +1,11 @@
 package com.example.todayhome.src.main.HomeFragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.todayhome.R
 import com.example.todayhome.databinding.FragmentHomeBinding
@@ -23,7 +25,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         tabLayoutViewPage2()
 
-
+//        Log.d("코난로그", getJwt().toString())
         return binding.root
     }
 
@@ -53,6 +55,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         })
 
 
+    }
+
+    private fun getJwt(): String? {
+        val spf = activity?.getSharedPreferences("auth2" , AppCompatActivity.MODE_PRIVATE)
+
+        return spf!!.getString("jwt", "")
     }
 
 }

@@ -4,5 +4,8 @@
     <dimen name="pageMargin">88dp</dimen>
     <dimen name="pageWidth">100dp</dimen>
 
+    <dimen name="pageMargin2">400dp</dimen>
+    <dimen name="pageWidth2">100dp</dimen>
+
 
 </resources>

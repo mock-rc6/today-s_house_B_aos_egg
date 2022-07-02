@@ -41,8 +41,7 @@ class Email_join_Activity : AppCompatActivity() , SignUpView{
         val email: String = binding.editEmail.text.toString()
         val pwd: String = binding.editPassword.text.toString()
         val name: String = binding.editNickname.text.toString()
-        val gender = "male"
-        val bornYear:Int= 1999
+
         return User(email, pwd, name)
     }
 

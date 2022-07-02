@@ -16,13 +16,11 @@ import com.example.todayhome.R
 import com.example.todayhome.config.store.api.StoreService
 import com.example.todayhome.config.store.storeAPI
 import com.example.todayhome.databinding.FragmentStoreHomeBinding
+import com.example.todayhome.src.main.MainActivity
+import com.example.todayhome.src.main.store.*
 
-import com.example.todayhome.src.main.store.DetailActivity
-import com.example.todayhome.src.main.store.DetailPopularActivity
-import com.example.todayhome.src.main.store.StoreHomeTodayDillActivity
 import com.example.todayhome.src.main.store.adapter.*
 import com.example.todayhome.src.main.store.data.*
-import com.example.todayhome.src.main.store.storeHomeViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import retrofit2.Call
@@ -54,14 +52,12 @@ class StoreHomeFragment : Fragment() {
     })
 
 
-
     private lateinit var storeservice: StoreService
     private lateinit var gridRecyclerViewAdapter: GridMenuStoreHomeAdapter
     private lateinit var gridRecyclerViewAdapter2: GridMenuStoreHomeAdapter2
     private lateinit var gridRecyclerViewAdapter3: PopularSearchAdapter
 
     private lateinit var popularAdapter: PopularItemAdapter
-
 
 
     override fun onCreateView(
@@ -83,6 +79,8 @@ class StoreHomeFragment : Fragment() {
 //        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
 //        binding.myItemViewPage2.adapter = viewPagerAdapter2
         initPopularRecyclerView()
+
+
 
         val retrofit = Retrofit.Builder()
             .baseUrl("https://prod.rc-rising-test-6th.shop/")
