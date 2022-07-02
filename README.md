@@ -4,6 +4,16 @@
 프로젝트 기간 : 22-06-25 ~ 22-07-08 
 
 <details>
+<summary> 사용한 API</summary>
+- 유저이메일 회원가입API<br>
+- 유저 비밀번호 변경 API<br>
+- 로그인 API<br>
+- store 스토어 메인화면 - 뷰페이저 <br>
+- 메인 화면의 이벤트 배너 리스트들 불러오기<br>
+
+
+</details>
+<details>
 <summary>1차 팀원 회의 내용 </summary>
 팀원 : 데이지(서버), 마누(android), 에그(android), 루시(android)<br>
 다음회의 : 6월 28일 예정
@@ -32,8 +42,6 @@
 - Splash 로그인 화면 구현<br> ★
 - 오늘의집 레이아웃 구성<br>
 - 로그인api (카카오, 이메일 로그인) ☆ 이메일은 x 
-
-
 
 </details>
 <details>
@@ -237,5 +245,31 @@ retrofit에 대한 공부와 API명세서를 제대로 안보고 무지성으로
 오늘은 비밀번호를 바꾸는 API를 할려고 했는데 PATCH를 사용해 본적이 없어서 오늘 하루 뷰를 그리고 비밀번호를 바꾸는 API 사용법을
 익히는데 시간을 보냈습니다. 
 오늘 성공을 하지 못해서 내일 성공하도록 하겠습니다.
+
+</details>
+
+<details>
+<summary> 7월 2일 개발 일지</summary>
+- 비밀번호 변경하기 구현완료<br>
+- 홈 화면 베너 구현<br>
+
+<br><br>
+오늘은 어제 실패한 비밀번호를 구현하는 데 성공을 하였습니다 그리고 홈 화면에서 베너에 API를 연결하였습니다. <br>
+그리고 베너를 자동으로 넘어가도록 구현하였습니다.
+<br>
+<br>
+오늘은 마이페이지까지 구현하는 걸 목표로 하고 있으며  월요일까지 12개를 채우는 걸 목표로 하고있습니다.
+
+<img src = "https://user-images.githubusercontent.com/76811495/177002528-c9e7181e-67f7-4243-a78c-24c48f0b6596.png" width="width 30px" height="height 30%">
+
+
+<br>
+<br>
+
+<img src = "https://user-images.githubusercontent.com/76811495/177002595-d4032200-032b-4b27-823c-278032822897.png" width="width 30px" height="height 30%">
+
+
+
+
 
 </details>
