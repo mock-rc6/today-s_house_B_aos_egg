@@ -42,9 +42,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="13dp"
-                android:text="에그"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:text="에그"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/profilePicImageView"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -422,7 +422,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <TextView
-                            android:id="@+id/myLikeTextView"
+                            android:id="@+id/myPointTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="25dp"
@@ -446,7 +446,7 @@
                             android:textSize="13sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/myLikeTextView" />
+                            app:layout_constraintTop_toBottomOf="@id/myPointTextView" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

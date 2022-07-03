@@ -1,5 +1,5 @@
 # todayhome
-오늘의 집 clone (완성률 : 3%)
+오늘의 집 clone 
 
 프로젝트 기간 : 22-06-25 ~ 22-07-08 
 
@@ -8,9 +8,9 @@
 - 유저이메일 회원가입API<br>
 - 유저 비밀번호 변경 API<br>
 - 로그인 API<br>
-- store 스토어 메인화면 - 뷰페이저 <br>
-- 메인 화면의 이벤트 배너 리스트들 불러오기<br>
-
+- store 스토어 메인화면 API - 뷰페이저 <br>
+- 메인 화면의 이벤트 배너 리스트들 불러오기 API<br>
+- 유저 마이페이지 API
 
 </details>
 <details>
@@ -52,6 +52,17 @@
 - 비회원 주문 조회하기 뷰 만 그리기로 결정
 - 회원가입 부분 맞춤설정 안 하기로 결정
 - 로그아웃 기능 요청
+
+
+</details>
+<details>
+<summary>1차 피드백 내용 </summary>
+
+- 아이콘 누끼따서 오늘의 집과 똑같이 만들기
+- 마진, 패딩 미흡
+- 서버 파트분이랑 커뮤니케이션 미흡 -> 소설 로그인 논의 필요
+- 삽질x -> 모르는 거 있으면 바로 질문하고 다른 일 처리하기
+- 다음주 월요일까지 api 주요 기능 15개 추가해보기
 
 
 </details>
@@ -98,17 +109,6 @@
 
 
    <img src = "https://user-images.githubusercontent.com/76811495/175778935-ad2ee378-9bf0-4858-b68a-70f902af2a3d.png" width="width 30%" height="height 30%">
-
-</details>
-<details>
-<summary>1차 피드백 내용 </summary>
-
-- 아이콘 누끼따서 오늘의 집과 똑같이 만들기 
-- 마진, 패딩 미흡
-- 서버 파트분이랑 커뮤니케이션 미흡 -> 소설 로그인 논의 필요
-- 삽질x -> 모르는 거 있으면 바로 질문하고 다른 일 처리하기
-- 다음주 월요일까지 api 주요 기능 15개 추가해보기
-
 
 </details>
 <details>
@@ -249,7 +249,7 @@ retrofit에 대한 공부와 API명세서를 제대로 안보고 무지성으로
 </details>
 
 <details>
-<summary> 7월 2일 개발 일지</summary>
+<summary> 📌7월 2일 개발 일지</summary>
 - 비밀번호 변경하기 구현완료<br>
 - 홈 화면 베너 구현<br>
 
@@ -260,13 +260,41 @@ retrofit에 대한 공부와 API명세서를 제대로 안보고 무지성으로
 <br>
 오늘은 마이페이지까지 구현하는 걸 목표로 하고 있으며  월요일까지 12개를 채우는 걸 목표로 하고있습니다.
 
-<img src = "https://user-images.githubusercontent.com/76811495/177002528-c9e7181e-67f7-4243-a78c-24c48f0b6596.png" width="width 30px" height="height 30%">
+
+<br>
+<br>
+
+<img src = "https://user-images.githubusercontent.com/76811495/177042489-99b75933-d85f-4249-b5c1-f09dca83371a.PNG" width="width 30px" height="height 30%">
 
 
 <br>
 <br>
 
 <img src = "https://user-images.githubusercontent.com/76811495/177002595-d4032200-032b-4b27-823c-278032822897.png" width="width 30px" height="height 30%">
+
+
+
+
+
+</details>
+
+<details>
+<summary> 📌7월 3일 개발 일지</summary>
+- 마이페이지 프로필, 나의쇼핑 레이아웃 만들기 완료 <br>
+- 마이페이지 프로필에서 유저 마이 페이지 API 연결 <br>
+
+<br><br>
+오늘은 마이페이지를 만들었습니다.<br>
+프로필탭과 나의 쇼핑탭을 만들었고 프로필탭은 레이아웃을 끝 맞치고 유저마이페이지 API와 연결을 끝냈습니다.<br>
+그리고나서 나의 쇼핑탭에서 레이아웃을 다 만들었고 나의 쇼핑 페이지 API와 연결할 계획입니다.
+
+<img src = "https://user-images.githubusercontent.com/76811495/177042489-99b75933-d85f-4249-b5c1-f09dca83371a.PNG" width="width 30px" height="height 30%">
+
+
+<br>
+<br>
+
+<img src = "https://user-images.githubusercontent.com/76811495/177042616-7e56157a-86f2-4786-b6dc-1a0ef72c9061.PNG" width="width 30px" height="height 30%">
 
 
 

@@ -130,9 +130,7 @@ class PopularFragment : Fragment() {
     }
 
 
-    companion object {
-        private const val BASE_URL = "https://prod.rc-rising-test-6th.shop/"
-    }
+
 
     private fun getJwt(): String? {
         val spf = activity?.getSharedPreferences("auth2", AppCompatActivity.MODE_PRIVATE)
@@ -177,6 +175,10 @@ class PopularFragment : Fragment() {
     override fun onPause() {
         super.onPause()
         job.cancel()
+    }
+
+    companion object {
+        private const val BASE_URL = "https://prod.rc-rising-test-6th.shop/"
     }
 
 

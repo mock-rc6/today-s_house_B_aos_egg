@@ -8,44 +8,41 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.95">
+>
 
         <ImageButton
             android:id="@+id/email_login_arrow_button"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
             android:background="#00FF0000"
-            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:src="@drawable/arrowleft"
+            android:scaleType="fitXY"
+            android:layout_marginStart="7dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.07" />
+   />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
             android:gravity="center"
             android:text="이메일 회원가입"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.5"
             app:layout_constraintStart_toEndOf="@id/email_login_arrow_button"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.27" />
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -84,7 +81,7 @@
                 android:minHeight="0dp"
                 android:paddingEnd="3dp"
                 android:text="인테리어 전문가이시다면"
-                android:textColor="#939393"
+                android:textColor="#757575"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@id/forwardArrow"
                 app:layout_constraintTop_toTopOf="parent" />

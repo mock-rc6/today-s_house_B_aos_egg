@@ -14,7 +14,7 @@
         android:text="@string/text"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.1"
@@ -46,8 +46,8 @@
         android:layout_marginBottom="40dp"
         android:background="@drawable/rectangle_all_corner_radius"
         android:padding="3dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
+        android:paddingStart="66dp"
+        android:paddingEnd="68dp"
         android:scaleType="fitCenter"
         android:src="@drawable/kakao_login"
         app:layout_constraintHeight_default="percent"
@@ -56,7 +56,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/second_3_ImageView"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.6" />
+        app:layout_constraintWidth_percent="0.77" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_button_icon"
@@ -73,9 +73,10 @@
 
         <ImageView
             android:id="@+id/naverButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
             android:scaleType="fitXY"
+            android:layout_marginStart="40dp"
             android:src="@drawable/naver"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/FrameLayout1"
@@ -85,8 +86,8 @@
 
         <FrameLayout
             android:id="@+id/FrameLayout1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/appleButton"
             app:layout_constraintStart_toEndOf="@id/naverButton"
@@ -123,12 +124,13 @@
 
         <ImageView
             android:id="@+id/appleButton"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:scaleType="fitXY"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/apple"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="26dp"
             app:layout_constraintStart_toEndOf="@id/FrameLayout1"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -137,15 +139,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/emailConstraintLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_button_icon"
-        app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.73">
+        app:layout_constraintTop_toBottomOf="@id/login_button_icon">
 
         <Button
             android:id="@+id/email_login"
@@ -193,6 +193,7 @@
         android:text="로그인에 문제가 있으신가요?"
         android:textColor="#A5A5A5"
         android:textSize="13sp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailConstraintLayout" />
@@ -201,7 +202,7 @@
         android:id="@+id/Non_members"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:background="#00FF0000"
         android:text="비회원 주문 조회하기"
         android:textColor="#3A3A3A"

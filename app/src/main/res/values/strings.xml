@@ -55,5 +55,11 @@
         친구 초대하고<html><font color="#45CAF1"> 5,000p </font></html>받기
     </string>
 
+    <string name = "waiting">
+        입금
+        대기
+        <html><font color="#35C5F0">0</font></html>
+    </string>
+
 
 </resources>
