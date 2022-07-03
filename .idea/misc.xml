@@ -12,6 +12,9 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/drawable_all_see.xml" value="0.1835" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/drawble_left_image_custom.xml" value="0.184" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle.xml" value="0.2265" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle10.xml" value="0.136" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle11.xml" value="0.221" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle12.xml" value="0.235" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle2.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle3.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle4.xml" value="0.187" />
@@ -81,7 +84,7 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_know_how.xml" value="0.3619791666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page.xml" value="0.3515625" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_my_shopping.xml" value="0.36614583333333334" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_profile.xml" value="0.33161688980432547" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_profile.xml" value="0.4087209302325581" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_photo.xml" value="0.19895833333333332" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_plan.xml" value="0.35052083333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_popular.xml" value="0.29842446709916587" />
