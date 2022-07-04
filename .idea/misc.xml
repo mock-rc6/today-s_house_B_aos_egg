@@ -58,9 +58,9 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_categoty_item.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail.xml" value="0.22" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail_gird.xml" value="0.20625" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail_popular.xml" value="0.26770538243626063" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail_popular.xml" value="0.36237113402061855" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_dialog.xml" value="0.36614583333333334" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join.xml" value="0.3970037453183521" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join.xml" value="0.37653990358864486" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join2.xml" value="0.3151041666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_login.xml" value="0.25" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_event.xml" value="0.36614583333333334" />
@@ -98,7 +98,7 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_know_how.xml" value="0.3619791666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page.xml" value="0.3515625" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_my_shopping.xml" value="0.25" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_profile.xml" value="0.9" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_profile.xml" value="0.5" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_photo.xml" value="0.19895833333333332" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_plan.xml" value="0.35052083333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_poplur_review.xml" value="0.3515625" />
