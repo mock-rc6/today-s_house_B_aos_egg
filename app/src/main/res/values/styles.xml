@@ -16,7 +16,7 @@
 
         <item name="android:textStyle">bold</item>
     </style>
-    출처: https://curryyou.tistory.com/432 [카레유:티스토리]
+
 
     <style name="fragmentHomeMusicTabText" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!--        폰트크기-->

@@ -52,7 +52,7 @@
                 android:layout_marginBottom="10dp"
                 android:alpha="0.8"
                 android:background="@drawable/edittext_rounded_corner_rectangle8"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/NestedScrollableHost"
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -108,15 +108,201 @@
                         android:layout_height="12dp"
                         android:layout_marginStart="3dp"
                         android:background="@android:color/transparent"
+                        android:backgroundTint="@color/white"
                         android:scaleType="fitCenter"
                         android:src="@drawable/add"
-                        android:backgroundTint="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/bannerEndTextView"
                         app:layout_constraintTop_toTopOf="parent"
                         app:tint="#FFFFFF" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
+
+            <ImageView
+                android:id="@+id/popularHomeMenuImageView"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/poplurhome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NestedScrollableHost" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#F7F8FA"
+                app:layout_constraintTop_toBottomOf="@id/popularHomeMenuImageView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/todayDillConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1"
+                app:layout_constraintWidth_default="percent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="최근 본 상품의 인기 스타일링 사진"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/todayDillViewMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="right|center"
+                    android:src="@drawable/homepopulrstar"
+                    android:textColor="#828C94"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.33" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imagehomepopulr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/imagehomepopulr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/todayDillConstraintLayout" />
+
+            <com.example.todayhome.util.NestedScrollableHost
+                android:id="@+id/toDayDillViewPage2NestedScrollableHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imagehomepopulr"
+                app:layout_constraintWidth_default="percent">
+
+                <androidx.viewpager2.widget.ViewPager2
+
+                    android:id="@+id/toDayDillViewPage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal" />
+
+            </com.example.todayhome.util.NestedScrollableHost>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="#F7F8FA"
+                app:layout_constraintTop_toBottomOf="@id/toDayDillViewPage2NestedScrollableHost" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/popularItemConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2"
+                app:layout_constraintWidth_default="percent">
+
+
+                <TextView
+                    android:id="@+id/honeyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:text="아주 쏠쏠한 공간 꿀팁"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/honey"
+                    app:layout_constraintStart_toEndOf="@id/honeyTextView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/honeyImageView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@id/popularItemConstraintLayout"
+            app:layout_constraintStart_toStartOf="@id/popularItemConstraintLayout"
+            app:layout_constraintEnd_toEndOf="@id/popularItemConstraintLayout"
+            android:src="@drawable/honey1"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="17dp"
+            android:layout_marginStart="17dp"/>
+
+            <ImageView
+                android:id="@+id/honeyButton"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginTop="17dp"
+                app:layout_constraintStart_toStartOf="@id/popularItemConstraintLayout"
+                app:layout_constraintEnd_toEndOf="@id/popularItemConstraintLayout"
+                app:layout_constraintTop_toBottomOf="@id/honeyImageView"
+                android:src="@drawable/honeybutton"/>
+
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="500dp"
+               android:src="@drawable/homebottom"
+               app:layout_constraintTop_toBottomOf="@id/honeyButton"
+               app:layout_constraintStart_toStartOf="@id/popularItemConstraintLayout"
+               app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

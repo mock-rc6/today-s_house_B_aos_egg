@@ -3,20 +3,30 @@ package com.example.todayhome.src.main.HomeFragment
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.todayhome.BuildConfig
 import com.example.todayhome.R
 import com.example.todayhome.config.home.api.EventAPI
 import com.example.todayhome.config.home.api.HomeService
+import com.example.todayhome.config.store.api.StoreService
+import com.example.todayhome.config.store.storeAPI
 import com.example.todayhome.databinding.*
 import com.example.todayhome.src.login.Password_reset_Activity
-import com.example.todayhome.src.main.HomeFragment.adapter.BannerAdapter
+import com.example.todayhome.src.main.HomeFragment.adapter.*
+import com.example.todayhome.src.main.store.DetailPopularActivity
+import com.example.todayhome.src.main.store.StoreHomeTodayDillActivity
+import com.example.todayhome.src.main.store.adapter.PopularItemAdapter
+import com.example.todayhome.src.main.store.adapter.ViewPager2TodayDillAdapter
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import okhttp3.OkHttpClient
@@ -39,6 +49,10 @@ class PopularFragment : Fragment() {
 
     private var bannerPosition = 0
     lateinit var job: Job
+    private lateinit var storeservice: StoreService
+    private val viewPagerAdapter2 = homePopularAdapter()
+    private var viewPagerAdapter22 = categoryAdapter
+    private lateinit var viewModel: categoryViewmodel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +60,36 @@ class PopularFragment : Fragment() {
     ): View {
         _binding = FragmentPopularBinding.inflate(inflater, container, false)
         binding.viewPager2.adapter = viewPagerAdapter
+        viewModel = ViewModelProvider(this).get(categoryViewmodel::class.java)
+        viewModel.setBannerItems(homeItemList)
+        binding.toDayDillViewPage2.adapter = viewPagerAdapter2
+
+        val retrofit2 = Retrofit.Builder()
+            .baseUrl("https://prod.rc-rising-test-6th.shop/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        storeservice = retrofit2.create(StoreService::class.java)
+        storeservice.storeApi()
+            .enqueue(object : Callback<storeAPI> {
+                override fun onFailure(call: Call<storeAPI>, t: Throwable) {
+
+                }
+
+                override fun onResponse(call: Call<storeAPI>, response: Response<storeAPI>) {
+                    if (response.isSuccessful.not()) {
+                        return
+                    }
+
+                    response.body()?.let { it ->
+                        Log.d("코난", it.result?.todaysDealList.toString())
+                        viewPagerAdapter2.submitList(it.result?.todaysDealList)
+                    }
+
+                }
+
+            })
+
 
         val client: OkHttpClient = OkHttpClient.Builder()
             .addInterceptor(
@@ -125,7 +169,7 @@ class PopularFragment : Fragment() {
             }
         })
 
-
+        viewPage2side()
         return binding.root
     }
 
@@ -164,6 +208,48 @@ class PopularFragment : Fragment() {
 //
 //
 //    }
+
+    private fun viewPage2side() {
+        val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin)
+        val pagerWidth = resources.getDimensionPixelOffset(R.dimen.pageWidth)
+        val screenWidth = resources.displayMetrics.widthPixels
+        val offsetPx = screenWidth - pageMarginPx - pagerWidth
+
+        binding.toDayDillViewPage2.setPageTransformer { page, position ->
+            page.translationX = position * -offsetPx
+        }
+
+        binding.toDayDillViewPage2.offscreenPageLimit = 2
+        binding.toDayDillViewPage2.adapter = viewPagerAdapter2
+        binding.toDayDillViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+//        binding.recentItemViewPage2.setPageTransformer { page, position ->
+//            page.translationX = position * -offsetPx
+//        }
+//
+//        binding.recentItemViewPage2.offscreenPageLimit = 2
+//        binding.recentItemViewPage2.adapter = viewPagerAdapter2
+//        binding.recentItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+//
+//        binding.RelationItemViewPage2.setPageTransformer { page, position ->
+//            page.translationX = position * -offsetPx
+//        }
+//
+//        binding.RelationItemViewPage2.offscreenPageLimit = 2
+//        binding.RelationItemViewPage2.adapter = viewPagerAdapter2
+//        binding.RelationItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+//
+//        binding.myItemViewPage2.setPageTransformer { page, position ->
+//            page.translationX = position * -offsetPx
+//        }
+//
+//        binding.myItemViewPage2.offscreenPageLimit = 2
+//        binding.myItemViewPage2.adapter = viewPagerAdapter2
+//        binding.myItemViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+
+    }
+
 
 
 

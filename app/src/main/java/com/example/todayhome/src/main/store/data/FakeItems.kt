@@ -5,7 +5,7 @@ import com.example.todayhome.R
 
 val StoreHomeBannerItemList = listOf(
     StoreHomeBannerItem(R.drawable.store1),
-    StoreHomeBannerItem(R.drawable.store2),
+    StoreHomeBannerItem(R.drawable.store3),
     StoreHomeBannerItem(R.drawable.store3),
     StoreHomeBannerItem(R.drawable.store4),
     StoreHomeBannerItem(R.drawable.store5),

@@ -27,7 +27,10 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
     ): View {
         _binding = FragmentMyPageBinding.inflate(inflater, container, false)
         tabLayoutViewPage2()
-
+        binding.settingButton.setOnClickListener {
+            val intent = Intent(activity, SettingActivity::class.java)
+            startActivity(intent)
+        }
 
         return binding.root
     }
@@ -38,10 +41,7 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
 
         val tabName = arrayOf("프로필", "나의 쇼핑", )
 
-        binding.settingButton.setOnClickListener {
-            val intent = Intent(activity, SettingActivity::class.java)
-            startActivity(intent)
-        }
+
         TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
             tab.text = tabName[position]
         }.attach()

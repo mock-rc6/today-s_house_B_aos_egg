@@ -39,7 +39,7 @@
 
     <string name="event_string">
 
-        <html><u>이벤트,쿠폰, 특가 알림 메일, 앱푸시 및 SMS 등 수신</u><font color="#808080" size="10">(선택)</font></html>
+        <html><u>이벤트,쿠폰, 특가 알림 메일, 앱푸시 및 SMS 등 수신</u><font color="#808080" size="10">\n(선택)</font></html>
     </string>
     <string name="splashImagView">스플래쉬 화면 이미지뷰</string>
 
@@ -51,11 +51,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name = "friend">
+    <string name="friend">
         친구 초대하고<html><font color="#45CAF1"> 5,000p </font></html>받기
     </string>
 
-    <string name = "waiting">
+    <string name="waiting">
         입금
         대기
         <html><font color="#35C5F0">0</font></html>

@@ -3,7 +3,10 @@ package com.example.todayhome.src.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import com.example.todayhome.config.*
 import com.example.todayhome.databinding.ActivityEmailLoginBinding
 import com.example.todayhome.src.main.MainActivity
@@ -29,6 +32,49 @@ class Email_loginActivity : AppCompatActivity(), LoginView {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        binding.editEmail.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(binding.editEmail.length() > 1 && binding.editPassword.length()> 1) { // 패스워드의 길이가 1미만이면
+                    binding.loginButton.isClickable = true
+                    binding.loginButton.isEnabled = true
+                } else {
+                    binding.loginButton.isClickable = false
+                    binding.loginButton.isEnabled = false
+                }
+
+            }
+        })
+
+        binding.editPassword.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if(binding.editEmail.length() > 0 && binding.editPassword.length()> 0) {
+                    binding.loginButton.isClickable = true
+                    binding.loginButton.isEnabled = true
+                } else {
+                    binding.loginButton.isClickable = false
+                    binding.loginButton.isEnabled = false
+                }
+
+            }
+        })
+
 
         binding.loginButton.setOnClickListener {
             login()

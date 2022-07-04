@@ -74,9 +74,9 @@
         <ImageView
             android:id="@+id/naverButton"
             android:layout_width="66dp"
-            android:layout_height="66dp"
+            android:layout_height="60dp"
             android:scaleType="fitXY"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="50dp"
             android:src="@drawable/naver"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/FrameLayout1"
@@ -87,7 +87,7 @@
         <FrameLayout
             android:id="@+id/FrameLayout1"
             android:layout_width="66dp"
-            android:layout_height="66dp"
+            android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/appleButton"
             app:layout_constraintStart_toEndOf="@id/naverButton"
@@ -125,12 +125,12 @@
         <ImageView
             android:id="@+id/appleButton"
             android:layout_width="66dp"
-            android:layout_height="66dp"
+            android:layout_height="60dp"
             android:scaleType="fitCenter"
             android:src="@drawable/apple"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="26dp"
+            android:layout_marginEnd="30dp"
             app:layout_constraintStart_toEndOf="@id/FrameLayout1"
             app:layout_constraintTop_toTopOf="parent" />
 

@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/home"
-        android:icon="@drawable/bottom1"
+        android:icon="@drawable/home_custom"
         android:title="홈" />
 
     <item android:id="@+id/store"
-        android:icon="@drawable/bottom2"
+        android:icon="@drawable/store_custom"
         android:title="스토어" />
 
     <item android:id="@+id/home_service"
-        android:icon="@drawable/bottom3"
+        android:icon="@drawable/serach_custom"
         android:title="맞춤업체찾기" />
 
     <item android:id="@+id/my_page"
-        android:icon="@drawable/bottom4"
+        android:icon="@drawable/mypage_custom"
         android:title="마이페이지" />
 
     <item android:id="@+id/plus"
