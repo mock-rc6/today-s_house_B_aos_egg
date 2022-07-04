@@ -66,6 +66,19 @@
 
 
 </details>
+
+<details>
+<summary>2차 피드백 내용 </summary>
+
+- 금요일 12시 되기 전까지  API 15이상 붙이기
+- 마진, 패딩 맞추기
+- 선택과 집중 필요
+- 우선 순위에 맞게 결제하기.장바구니 구현하기
+- 홈 화면 꽉차게 채우기
+- 녹화할때 구현 안 된 부분 보여주기 x
+
+
+</details>
 <details>
 <summary>📌6월 25일 개발 일지</summary>
 📌6월 25일 개발 일지
@@ -295,6 +308,21 @@ retrofit에 대한 공부와 API명세서를 제대로 안보고 무지성으로
 <br>
 
 <img src = "https://user-images.githubusercontent.com/76811495/177042616-7e56157a-86f2-4786-b6dc-1a0ef72c9061.PNG" width="width 30px" height="height 30%">
+
+
+
+
+
+</details>
+
+<details>
+<summary> 📌7월 4일 개발 일지</summary>
+-홈 화면 꽉채우기
+
+<br><br>
+오늘은 상품 상세 페이지를 만들다가 도저히 안되서 질문을 하였고 답변으로 받은 키워드로 상세페이지를 만들고 있었습니다.<br>
+그리고 홈 화면이 비어보인다는 말에 홈 화면을 꽉 채웠고 상세 페이지를 만들고 제가 붙을 API 우선순위를 정하였습니다.
+
 
 
 
