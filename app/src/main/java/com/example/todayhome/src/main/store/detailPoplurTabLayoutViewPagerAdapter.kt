@@ -15,12 +15,12 @@ class detailPoplurTabLayoutViewPagerAdapter(fragment: DetailPopularActivity) : F
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> item_info()
+            0 -> item_infoviewFragment()
             1 -> poplurReviewFragment()
             2 ->inquiryFragment()
             3 -> deliveryFragment()
             4-> proposalFragment()
-            else -> item_info()
+            else -> item_infoviewFragment()
         }
     }
 }
