@@ -17,7 +17,7 @@ data class Result(
     @SerializedName("inquiry")
     val inquiry: Int?,
     @SerializedName("itemInfoList")
-    val itemInfoList: List<Any>?,
+    val itemInfoList: List<String>?,
     @SerializedName("itemName")
     val itemName: String?,
     @SerializedName("one")

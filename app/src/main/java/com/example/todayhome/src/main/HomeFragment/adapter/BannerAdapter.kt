@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.example.todayhome.config.home.api.Result
 import com.example.todayhome.databinding.ActivityItemLayoutBannerBinding
 
+
 class BannerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 

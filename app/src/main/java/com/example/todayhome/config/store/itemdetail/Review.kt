@@ -10,8 +10,8 @@ data class Review(
     val createdAt: String?,
     @SerializedName("description")
     val description: String?,
-    @SerializedName("imgList")
-    val imgList: List<String>?,
+    @SerializedName("img")
+    val img: String?,
     @SerializedName("itemName")
     val itemName: String?,
     @SerializedName("profilePic")

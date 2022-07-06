@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -194,17 +195,6 @@
                 app:layout_constraintTop_toBottomOf="@id/starNum" />
 
             <TextView
-                android:id="@+id/percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="%"
-                android:textColor="#35C5F0"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@id/discount"
-                app:layout_constraintTop_toBottomOf="@id/starNum" />
-
-            <TextView
                 android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -213,6 +203,8 @@
                 android:textColor="@color/black"
                 android:textSize="21sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="270dp"
                 app:layout_constraintStart_toEndOf="@id/discount"
                 app:layout_constraintTop_toBottomOf="@id/starNum" />
 
@@ -232,8 +224,8 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="#F3F3F3"
-                app:layout_constraintTop_toBottomOf="@id/price" />
-
+                app:layout_constraintTop_toBottomOf="@id/price"
+                tools:layout_editor_absoluteX="-16dp" />
 
             <ImageView
                 android:id="@+id/shipping"
@@ -364,8 +356,8 @@
             android:id="@+id/scrapText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="1,900"
+            android:layout_marginStart="13dp"
+            android:text="13"
             android:textColor="@color/black"
             android:textSize="11sp"
             android:layout_marginBottom="5dp"

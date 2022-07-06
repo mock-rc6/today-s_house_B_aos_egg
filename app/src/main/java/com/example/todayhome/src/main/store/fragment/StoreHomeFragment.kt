@@ -202,7 +202,7 @@ class StoreHomeFragment : Fragment() {
             page.translationX = position * -offsetPx
         }
 
-        binding.toDayDillViewPage2.offscreenPageLimit = 2
+        binding.toDayDillViewPage2.offscreenPageLimit = 4
         binding.toDayDillViewPage2.adapter = viewPagerAdapter2
         binding.toDayDillViewPage2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
