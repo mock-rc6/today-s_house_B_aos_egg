@@ -4,6 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ListButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edittext_rounded_corner_rectangle15"
+        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+        android:drawableTint="#36C5F0"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="13dp"
+        android:paddingEnd="16dp"
+        android:gravity="center|start"
+        android:hint="옵션 1"
+        android:paddingStart="14dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
         android:id="@+id/fragmentLayout"
         android:layout_width="match_parent"
@@ -14,7 +34,7 @@
         android:background="@drawable/edittext_rounded_corner_rectangle14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+       app:layout_constraintTop_toBottomOf="@id/ListButton">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

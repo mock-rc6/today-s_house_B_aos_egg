@@ -135,5 +135,8 @@ dependencies {
 
     implementation 'com.github.amarjain07:StickyScrollView:1.0.3'
 
+    // coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
 
 }

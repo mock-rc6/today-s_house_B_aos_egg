@@ -18,6 +18,7 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable-v24/white_ background.xml" value="0.2575" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/activity_category_layout.xml" value="0.237" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/arrow_forwad_custom.xml" value="0.184" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/cart_check.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/category_store_corner_rectangle.xml" value="0.25" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/drawable_all_see.xml" value="0.1835" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/drawble_left_image_custom.xml" value="0.184" />
@@ -25,6 +26,10 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle10.xml" value="0.136" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle11.xml" value="0.221" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle12.xml" value="0.235" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle15.xml" value="0.2265" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle16.xml" value="0.2265" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle17.xml" value="0.2285" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle18.xml" value="0.2285" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle2.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle3.xml" value="0.2265" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/edittext_rounded_corner_rectangle4.xml" value="0.187" />
@@ -59,13 +64,14 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/tab_seletor.xml" value="0.1835" />
         <entry key="..\:/Project/todayHome/app/src/main/res/drawable/white_backg.xml" value="0.2575" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout-land/fragment_popular.xml" value="0.3411458333333333" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_buy.xml" value="0.5" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_buy.xml" value="0.33" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_buy_dialog.xml" value="0.33" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_cart.xml" value="0.33" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_cart_confirm.xml" value="0.35634517766497464" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_categoty_item.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail.xml" value="0.22" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail_gird.xml" value="0.20625" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail_popular.xml" value="0.25" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_detail_popular.xml" value="0.23112278397898883" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_dialog.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join.xml" value="0.37653990358864486" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_email_join2.xml" value="0.3151041666666667" />
@@ -80,10 +86,13 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_non_members.xml" value="0.33" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_password_change.xml" value="0.34993270524899056" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_password_reset.xml" value="0.33" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_payment.xml" value="0.28600488201790075" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_pop_fragment_detail.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_popular_item.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_popularsearch.xml" value="0.88125" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_review_list.xml" value="0.3651041666666667" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_scapall.xml" value="0.8022388059701493" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_scapbook.xml" value="0.25" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_scrap_dialog.xml" value="0.9" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_setting.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/activity_splash_screen.xml" value="0.36614583333333334" />
@@ -108,7 +117,7 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_know_how.xml" value="0.3619791666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page.xml" value="0.3515625" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_my_shopping.xml" value="0.25" />
-        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_profile.xml" value="0.3523809523809524" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_my_page_profile.xml" value="0.2503556187766714" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_photo.xml" value="0.19895833333333332" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_plan.xml" value="0.35052083333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_poplur_review.xml" value="0.3515625" />
@@ -118,6 +127,9 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_questions.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_recipe.xml" value="0.3515625" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_review.xml" value="0.43666323377960864" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_scap_all_tab.xml" value="0.25" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_scap_folder.xml" value="0.25729166666666664" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_scap_item.xml" value="0.25729166666666664" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_setting.xml" value="0.23125" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_store.xml" value="0.5133214920071048" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/fragment_store_home.xml" value="0.29580279813457694" />
@@ -128,6 +140,7 @@
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/item_event.xml" value="0.5" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/item_layout_popularsearch.xml" value="1.5" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/item_row.xml" value="0.36614583333333334" />
+        <entry key="..\:/Project/todayHome/app/src/main/res/layout/kakaologjin.xml" value="0.3614583333333333" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/layout_grid_menu_store_home.xml" value="0.3651041666666667" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/motion_scene_tabscroll.xml" value="0.36614583333333334" />
         <entry key="..\:/Project/todayHome/app/src/main/res/layout/review_item.xml" value="0.36614583333333334" />

@@ -1,6 +1,7 @@
 package com.example.todayhome.src.main.store
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -47,6 +48,8 @@ class DetailPopularActivity : AppCompatActivity() {
         val bottomSheetView = layoutInflater.inflate(R.layout.activity_scrap_dialog, null)
         val bottomSheetDialog = BottomSheetDialog(this)
         bottomSheetDialog.setContentView(bottomSheetView)
+        var scapLook = bottomSheetDialog.findViewById<ImageButton>(R.id.scapLook)
+
 
         val bottomBuySheetView = layoutInflater.inflate(R.layout.activity_buy, null)
         val bottomSheetDialog2 = BottomSheetDialog(this)
@@ -65,6 +68,20 @@ class DetailPopularActivity : AppCompatActivity() {
         var itemprice = bottomSheetDialog2.findViewById<TextView>(R.id.itemprice)
         var itemCount = bottomSheetDialog2.findViewById<TextView>(R.id.itemCount)
 
+
+        var shortcutButton = bottomSheetDialog3.findViewById<ImageButton>(R.id.shortcutButton)
+
+        shortcutButton!!.setOnClickListener {
+            val intent = Intent(this, cart_confirm_Activity::class.java)
+            startActivity(intent)
+
+        }
+
+        scapLook!!.setOnClickListener {
+            val intent = Intent(this, scapbookActivity::class.java)
+            startActivity(intent)
+
+        }
 
 
         binding.payButton.setOnClickListener {
@@ -227,6 +244,10 @@ class DetailPopularActivity : AppCompatActivity() {
 
                 })
         }
+
+
+
+
 
 
     }

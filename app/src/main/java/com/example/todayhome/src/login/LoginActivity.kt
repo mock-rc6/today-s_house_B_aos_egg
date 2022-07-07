@@ -3,11 +3,21 @@ package com.example.todayhome.src.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.webkit.WebChromeClient
+import android.webkit.WebViewClient
 import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.example.todayhome.BuildConfig
 import com.example.todayhome.R
+import com.example.todayhome.config.KaKaoLogin.kakaoInterface
+import com.example.todayhome.config.KaKaoLogin.kakaoLogin
+import com.example.todayhome.config.store.itemdetail.ItemDetail
+import com.example.todayhome.config.store.itemdetail.ItemDetailIInterface
 import com.example.todayhome.databinding.ActivityLoginBinding
 import com.example.todayhome.src.main.MainActivity
+import com.example.todayhome.src.main.store.DetailPopularActivity
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -19,6 +29,13 @@ import com.google.firebase.ktx.Firebase
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.AuthErrorCause
 import com.kakao.sdk.user.UserApiClient
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 class LoginActivity : AppCompatActivity() {

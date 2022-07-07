@@ -28,6 +28,7 @@
         android:layout_marginStart="15dp"/>
 
     <ImageButton
+        android:id="@+id/shortcutButton"
         android:layout_width="90dp"
         android:layout_height="40dp"
         android:background="@drawable/cartbutton"
@@ -40,6 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/cartImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/cartbottom"/>
 
 

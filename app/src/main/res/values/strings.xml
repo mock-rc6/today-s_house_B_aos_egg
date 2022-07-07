@@ -60,6 +60,8 @@
         대기
         <html><font color="#35C5F0">0</font></html>
     </string>
+    <string name="email">\@</string>
 
+    <string name="delivery">배송비 <html><font color="##545454">0원</font></html></string>
 
 </resources>

@@ -127,13 +127,14 @@
             android:gravity="center|start"
             android:hint="선택해주세요"
             android:paddingStart="13dp"
-            app:layout_constraintStart_toEndOf="@id/whelkTextView"
             android:textColor="@color/gray_93"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@id/whelkTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

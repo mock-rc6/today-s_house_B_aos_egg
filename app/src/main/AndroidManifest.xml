@@ -18,10 +18,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".CartActivity"
+            android:name=".src.main.store.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".BuyActivity"
+            android:name=".src.main.store.scapallActivity"
+            android:exported="false" />
+        <activity
+            android:name=".src.main.store.scapbookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".src.main.store.cart_confirm_Activity"
             android:exported="false" />
         <activity
             android:name=".src.main.HomeFragment.EventActivity"
