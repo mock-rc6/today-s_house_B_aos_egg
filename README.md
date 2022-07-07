@@ -5,12 +5,20 @@
 
 <details>
 <summary> 사용한 API</summary>
+11개 사용
+
 - 유저이메일 회원가입API<br>
 - 유저 비밀번호 변경 API<br>
 - 로그인 API<br>
 - store 스토어 메인화면 API - 뷰페이저 <br>
 - 메인 화면의 이벤트 배너 리스트들 불러오기 API<br>
 - 유저 마이페이지 API
+- 상품 상세페이지 API
+- 장바구니에 해당 상품 추가 API
+- 유저 장바구니 조회 API
+- 장바구니 상품 주문 API
+- 상품 스크랩 API
+
 
 </details>
 <details>
